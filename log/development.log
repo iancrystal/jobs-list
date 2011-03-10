@@ -1,0 +1,501 @@
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (120.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (91.0ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateJobs (20110310074140)
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "jobs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "category_id" integer, "title" varchar(255), "company" varchar(255), "city" varchar(255), "state" varchar(255), "website" varchar(255), "description" text, "contact_info" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20110310074140')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("jobs")[0m
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-09 23:59:32) [GET]
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/jobs
+Rendering jobs/index
+Completed in 9554ms (View: 9043, DB: 0) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-10 00:05:46) [GET]
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/jobs
+Rendering jobs/index
+Completed in 20ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-10 00:05:54) [GET]
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/jobs
+Rendering jobs/index
+Completed in 20ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-10 00:05:59) [GET]
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/jobs
+Rendering jobs/index
+Completed in 10ms (View: 0, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing JobsController#new (for 127.0.0.1 at 2011-03-10 00:06:05) [GET]
+Rendering template within layouts/jobs
+Rendering jobs/new
+Completed in 60ms (View: 50, DB: 0) | 200 OK [http://localhost/jobs/new]
+  [4;36;1mSQL (10.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateJobs (20110310074140)
+Migrating to CreateCategories (20110310082612)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "parent_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20110310082612')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("categories")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("jobs")[0m
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-10 00:39:42) [GET]
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/jobs
+Rendering jobs/index
+Completed in 241ms (View: 0, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing JobsController#new (for 127.0.0.1 at 2011-03-10 00:39:46) [GET]
+Rendering template within layouts/jobs
+Rendering jobs/new
+Completed in 40ms (View: 20, DB: 0) | 200 OK [http://localhost/jobs/new]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2011-03-10 00:39:57) [GET]
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `acts_as_tree' for #<Class:0x4974c68>):
+  app/models/category.rb:2
+  app/controllers/categories_controller.rb:5:in `index'
+
+Rendered rescues/_trace (130.0ms)
+Rendered rescues/_request_and_response (20.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2011-03-10 00:41:20) [GET]
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 321ms (View: 171, DB: 0) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2011-03-10 00:41:24) [GET]
+Rendering template within layouts/categories
+Rendering categories/new
+Completed in 40ms (View: 30, DB: 0) | 200 OK [http://localhost/categories/new]
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2011-03-10 00:41:26) [GET]
+Rendering template within layouts/categories
+Rendering categories/new
+Completed in 40ms (View: 20, DB: 0) | 200 OK [http://localhost/categories/new]
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2011-03-10 00:42:19) [POST]
+  Parameters: {"category"=>{"name"=>"web", "parent_id"=>""}, "commit"=>"Create", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;35;1mCategory Create (10.0ms)[0m   [0mINSERT INTO "categories" ("name", "updated_at", "parent_id", "created_at") VALUES('web', '2011-03-10 08:42:19', NULL, '2011-03-10 08:42:19')[0m
+Redirected to http://localhost:3000/categories/1
+Completed in 300ms (DB: 10) | 302 Found [http://localhost/categories]
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2011-03-10 00:42:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendering template within layouts/categories
+Rendering categories/show
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/categories/1]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2011-03-10 00:42:30) [GET]
+  [4;35;1mCategory Load (10.0ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 30ms (View: 10, DB: 10) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2011-03-10 00:42:32) [GET]
+Rendering template within layouts/categories
+Rendering categories/new
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/categories/new]
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2011-03-10 00:42:49) [POST]
+  Parameters: {"category"=>{"name"=>"programming", "parent_id"=>"web"}, "commit"=>"Create", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;36;1mCategory Create (10.0ms)[0m   [0;1mINSERT INTO "categories" ("name", "updated_at", "parent_id", "created_at") VALUES('programming', '2011-03-10 08:42:49', 0, '2011-03-10 08:42:49')[0m
+Redirected to http://localhost:3000/categories/2
+Completed in 150ms (DB: 10) | 302 Found [http://localhost/categories]
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2011-03-10 00:42:49) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+Rendering template within layouts/categories
+Rendering categories/show
+Completed in 30ms (View: 10, DB: 0) | 200 OK [http://localhost/categories/2]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2011-03-10 00:42:59) [GET]
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 20ms (View: 10, DB: 0) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2011-03-10 00:43:09) [GET]
+Rendering template within layouts/categories
+Rendering categories/new
+Completed in 30ms (View: 10, DB: 0) | 200 OK [http://localhost/categories/new]
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2011-03-10 00:43:18) [POST]
+  Parameters: {"category"=>{"name"=>"design", "parent_id"=>"web"}, "commit"=>"Create", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;35;1mCategory Create (0.0ms)[0m   [0mINSERT INTO "categories" ("name", "updated_at", "parent_id", "created_at") VALUES('design', '2011-03-10 08:43:18', 0, '2011-03-10 08:43:18')[0m
+Redirected to http://localhost:3000/categories/3
+Completed in 151ms (DB: 0) | 302 Found [http://localhost/categories]
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2011-03-10 00:43:18) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 3) [0m
+Rendering template within layouts/categories
+Rendering categories/show
+Completed in 30ms (View: 10, DB: 0) | 200 OK [http://localhost/categories/3]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2011-03-10 00:43:22) [GET]
+  [4;35;1mCategory Load (10.0ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 130ms (View: 30, DB: 10) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2011-03-10 00:43:40) [GET]
+Rendering template within layouts/categories
+Rendering categories/new
+Completed in 261ms (View: 20, DB: 0) | 200 OK [http://localhost/categories/new]
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2011-03-10 00:43:55) [POST]
+  Parameters: {"category"=>{"name"=>"ruby on rails", "parent_id"=>"programming"}, "commit"=>"Create", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;36;1mCategory Create (0.0ms)[0m   [0;1mINSERT INTO "categories" ("name", "updated_at", "parent_id", "created_at") VALUES('ruby on rails', '2011-03-10 08:43:55', 0, '2011-03-10 08:43:55')[0m
+Redirected to http://localhost:3000/categories/4
+Completed in 200ms (DB: 0) | 302 Found [http://localhost/categories]
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2011-03-10 00:43:55) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 4) [0m
+Rendering template within layouts/categories
+Rendering categories/show
+Completed in 20ms (View: 10, DB: 0) | 200 OK [http://localhost/categories/4]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2011-03-10 00:44:01) [GET]
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 40ms (View: 30, DB: 0) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2011-03-10 00:44:10) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 4) [0m
+Rendering template within layouts/categories
+Rendering categories/show
+Completed in 20ms (View: 10, DB: 0) | 200 OK [http://localhost/categories/4]
+
+
+Processing CategoriesController#edit (for 127.0.0.1 at 2011-03-10 00:44:17) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 4) [0m
+Rendering template within layouts/categories
+Rendering categories/edit
+Completed in 50ms (View: 30, DB: 0) | 200 OK [http://localhost/categories/4/edit]
+
+
+Processing CategoriesController#update (for 127.0.0.1 at 2011-03-10 00:44:25) [PUT]
+  Parameters: {"category"=>{"name"=>"ruby on rails", "parent_id"=>"programming"}, "commit"=>"Update", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY=", "id"=>"4"}
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 4) [0m
+Redirected to http://localhost:3000/categories/4
+Completed in 20ms (DB: 0) | 302 Found [http://localhost/categories/4]
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2011-03-10 00:44:25) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mCategory Load (10.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 4) [0m
+Rendering template within layouts/categories
+Rendering categories/show
+Completed in 80ms (View: 20, DB: 10) | 200 OK [http://localhost/categories/4]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2011-03-10 00:45:02) [GET]
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 231ms (View: 30, DB: 0) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2011-03-10 00:51:20) [GET]
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2011-03-10 00:51:25) [GET]
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 40ms (View: 20, DB: 0) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2011-03-10 00:51:36) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+Rendering template within layouts/categories
+Rendering categories/show
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/categories/2]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2011-03-10 00:56:05) [GET]
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 50ms (View: 40, DB: 0) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#edit (for 127.0.0.1 at 2011-03-10 00:56:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendering template within layouts/categories
+Rendering categories/edit
+Completed in 330ms (View: 310, DB: 0) | 200 OK [http://localhost/categories/1/edit]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2011-03-10 00:56:27) [GET]
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 40ms (View: 20, DB: 0) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2011-03-10 00:57:53) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+Rendering template within layouts/categories
+Rendering categories/show
+Completed in 30ms (View: 10, DB: 0) | 200 OK [http://localhost/categories/2]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2011-03-10 00:58:42) [GET]
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 50ms (View: 40, DB: 0) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#edit (for 127.0.0.1 at 2011-03-10 00:58:52) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+Rendering template within layouts/categories
+Rendering categories/edit
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/categories/2/edit]
+
+
+Processing CategoriesController#update (for 127.0.0.1 at 2011-03-10 00:58:55) [PUT]
+  Parameters: {"category"=>{"name"=>"programming", "parent_id"=>"1"}, "commit"=>"Update", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY=", "id"=>"2"}
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mCategory Update (0.0ms)[0m   [0;1mUPDATE "categories" SET "parent_id" = 1, "updated_at" = '2011-03-10 08:58:55' WHERE "id" = 2[0m
+Redirected to http://localhost:3000/categories/2
+Completed in 221ms (DB: 0) | 302 Found [http://localhost/categories/2]
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2011-03-10 00:58:55) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mCategory Load (10.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+Rendering template within layouts/categories
+Rendering categories/show
+Completed in 120ms (View: 20, DB: 10) | 200 OK [http://localhost/categories/2]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2011-03-10 00:58:58) [GET]
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 40ms (View: 20, DB: 0) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#edit (for 127.0.0.1 at 2011-03-10 00:59:01) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 3) [0m
+Rendering template within layouts/categories
+Rendering categories/edit
+Completed in 40ms (View: 20, DB: 0) | 200 OK [http://localhost/categories/3/edit]
+
+
+Processing CategoriesController#update (for 127.0.0.1 at 2011-03-10 00:59:04) [PUT]
+  Parameters: {"category"=>{"name"=>"design", "parent_id"=>"1"}, "commit"=>"Update", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY=", "id"=>"3"}
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 3) [0m
+  [4;35;1mCategory Update (0.0ms)[0m   [0mUPDATE "categories" SET "parent_id" = 1, "updated_at" = '2011-03-10 08:59:04' WHERE "id" = 3[0m
+Redirected to http://localhost:3000/categories/3
+Completed in 160ms (DB: 0) | 302 Found [http://localhost/categories/3]
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2011-03-10 00:59:04) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 3) [0m
+Rendering template within layouts/categories
+Rendering categories/show
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://localhost/categories/3]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2011-03-10 00:59:05) [GET]
+  [4;35;1mCategory Load (10.0ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 40ms (View: 20, DB: 10) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#edit (for 127.0.0.1 at 2011-03-10 00:59:08) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 4) [0m
+Rendering template within layouts/categories
+Rendering categories/edit
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/categories/4/edit]
+
+
+Processing CategoriesController#update (for 127.0.0.1 at 2011-03-10 00:59:10) [PUT]
+  Parameters: {"category"=>{"name"=>"ruby on rails", "parent_id"=>"2"}, "commit"=>"Update", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY=", "id"=>"4"}
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 4) [0m
+  [4;36;1mCategory Update (0.0ms)[0m   [0;1mUPDATE "categories" SET "parent_id" = 2, "updated_at" = '2011-03-10 08:59:10' WHERE "id" = 4[0m
+Redirected to http://localhost:3000/categories/4
+Completed in 200ms (DB: 0) | 302 Found [http://localhost/categories/4]
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2011-03-10 00:59:11) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 4) [0m
+Rendering template within layouts/categories
+Rendering categories/show
+Completed in 30ms (View: 10, DB: 0) | 200 OK [http://localhost/categories/4]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2011-03-10 00:59:12) [GET]
+  [4;36;1mCategory Load (10.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 241ms (View: 20, DB: 10) | 200 OK [http://localhost/categories]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-10 00:59:38) [GET]
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/jobs
+Rendering jobs/index
+Completed in 50ms (View: 30, DB: 0) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#new (for 127.0.0.1 at 2011-03-10 00:59:41) [GET]
+Rendering template within layouts/jobs
+Rendering jobs/new
+Completed in 50ms (View: 40, DB: 0) | 200 OK [http://localhost/jobs/new]
+
+
+Processing JobsController#new (for 127.0.0.1 at 2011-03-10 01:00:20) [GET]
+Rendering template within layouts/jobs
+Rendering jobs/new
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/jobs/new]
+
+
+Processing JobsController#new (for 127.0.0.1 at 2011-03-10 01:00:52) [GET]
+Rendering template within layouts/jobs
+Rendering jobs/new
+Completed in 50ms (View: 30, DB: 0) | 200 OK [http://localhost/jobs/new]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2011-03-10 01:09:01) [GET]
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 171ms (View: 20, DB: 0) | 200 OK [http://localhost/categories]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-10 01:20:16) [GET]
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/jobs
+Rendering jobs/index
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#new (for 127.0.0.1 at 2011-03-10 01:20:18) [GET]
+Rendering template within layouts/jobs
+Rendering jobs/new
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/jobs/new]
+
+
+Processing JobsController#create (for 127.0.0.1 at 2011-03-10 01:22:13) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY=", "job"=>{"city"=>"Alameda", "company"=>"Testing", "title"=>"Ruby on Rails Developer", "website"=>"www.yahoo.com", "contact_info"=>"send resume to resume@testing.com", "description"=>"Rockstar RoR guru needed:\r\n\r\n- cucumber\r\n- rspec\r\n- ajax\r\n\r\ntelecommuting", "category_id"=>"4", "state"=>"CA"}}
+  [4;36;1mJob Create (0.0ms)[0m   [0;1mINSERT INTO "jobs" ("company", "city", "updated_at", "title", "website", "category_id", "description", "contact_info", "state", "created_at") VALUES('Testing', 'Alameda', '2011-03-10 09:22:13', 'Ruby on Rails Developer', 'www.yahoo.com', 4, 'Rockstar RoR guru needed:
+
+- cucumber
+- rspec
+- ajax
+
+telecommuting', 'send resume to resume@testing.com', 'CA', '2011-03-10 09:22:13')[0m
+Redirected to http://localhost:3000/jobs/1
+Completed in 290ms (DB: 0) | 302 Found [http://localhost/jobs]
+
+
+Processing JobsController#show (for 127.0.0.1 at 2011-03-10 01:22:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs"."id" = 1) [0m
+Rendering template within layouts/jobs
+Rendering jobs/show
+Completed in 30ms (View: 10, DB: 0) | 200 OK [http://localhost/jobs/1]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-10 01:22:16) [GET]
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/jobs
+Rendering jobs/index
+Completed in 20ms (View: 10, DB: 0) | 200 OK [http://localhost/jobs]

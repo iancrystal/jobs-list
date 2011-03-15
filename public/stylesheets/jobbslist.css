@@ -1,0 +1,19 @@
+#site_container {
+  width: 960px;
+  border: 2px solid black;
+  background-color: #EEEEEE;
+}
+#masthead {
+  position: relative;
+  height: 130px;
+  background: url( '/images/header.jpg' ) left top repeat-x;
+}
+
+#content { 
+  position: relative; 
+  padding: 20px 20px 20px 20px;
+  margin-left: 80px;
+  margin-right: 80px;
+  background-color: #FFFFFF; 
+}
+

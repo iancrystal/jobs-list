@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>jobbslist: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'jobbslist', 'scaffold' %>
+</head>
+<body>
+
+
+    <div id="site_container">
+      <div id="masthead" class="logged_out <%=@sub_nav%>">
+      </div>
+      <div id="content">
+        <% if flash[:notice] -%>
+          <br/>
+          <div id="notice"><%= flash[:notice] %></div>
+        <% end -%>
+        <%= yield %>
+      </div>
+    </div>
+
+
+</body>
+</html>

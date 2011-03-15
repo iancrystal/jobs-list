@@ -499,3 +499,1351 @@ Processing JobsController#index (for 127.0.0.1 at 2011-03-10 01:22:16) [GET]
 Rendering template within layouts/jobs
 Rendering jobs/index
 Completed in 20ms (View: 10, DB: 0) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-10 01:45:35) [GET]
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/jobs
+Rendering jobs/index
+Completed in 20ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing JobsController#edit (for 127.0.0.1 at 2011-03-10 01:45:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs"."id" = 1) [0m
+Rendering template within layouts/jobs
+Rendering jobs/edit
+Completed in 250ms (View: 230, DB: 0) | 200 OK [http://localhost/jobs/1/edit]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2011-03-10 01:49:37) [GET]
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 40ms (View: 30, DB: 0) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2011-03-10 11:05:37) [GET]
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering categories/index
+Completed in 50ms (View: 40, DB: 0) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2011-03-10 11:05:39) [GET]
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering categories/index
+Completed in 40ms (View: 30, DB: 0) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2011-03-10 11:05:50) [GET]
+Rendering template within layouts/application
+Rendering categories/new
+Completed in 90ms (View: 70, DB: 0) | 200 OK [http://localhost/categories/new]
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2011-03-10 11:24:35) [GET]
+Rendering template within layouts/application
+Rendering categories/new
+Completed in 300ms (View: 290, DB: 0) | 200 OK [http://localhost/categories/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-10 11:24:35) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jobbslist%20scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2011-03-10 11:24:39) [GET]
+Rendering template within layouts/application
+Rendering categories/new
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/categories/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-10 11:24:39) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jobbslist%20scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2011-03-10 11:24:43) [GET]
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering categories/index
+Completed in 40ms (View: 20, DB: 0) | 200 OK [http://localhost/categories]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-10 11:24:43) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jobbslist%20scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2011-03-10 11:36:47) [GET]
+  [4;35;1mCategory Load (10.0ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering categories/index
+Completed in 50ms (View: 30, DB: 10) | 200 OK [http://localhost/categories]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-10 11:36:48) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jobbslist%20scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-10 11:37:05) [GET]
+  [4;36;1mJob Load (10.0ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 81ms (View: 60, DB: 10) | 200 OK [http://localhost/jobs]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-10 11:37:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jobbslist%20scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-10 11:37:47) [GET]
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 400ms (View: 280, DB: 0) | 200 OK [http://localhost/jobs]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-10 11:37:48) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jobbslist%20scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-10 11:39:58) [GET]
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 40ms (View: 30, DB: 0) | 200 OK [http://localhost/jobs]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-10 11:39:58) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jobbslist%20scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-10 11:44:34) [GET]
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 200ms (View: 190, DB: 0) | 200 OK [http://localhost/jobs]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-10 11:44:35) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jobbslist%20scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing JobsController#new (for 127.0.0.1 at 2011-03-10 11:44:42) [GET]
+Rendering template within layouts/application
+Rendering jobs/new
+Completed in 221ms (View: 211, DB: 0) | 200 OK [http://localhost/jobs/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-10 11:44:43) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jobbslist%20scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-10 11:45:43) [GET]
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-10 11:45:46) [GET]
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 40ms (View: 20, DB: 0) | 200 OK [http://localhost/jobs]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-10 11:45:46) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jobbslist%20scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-10 11:45:47) [GET]
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/jobs]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-10 11:45:47) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jobbslist%20scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2011-03-10 11:46:13) [GET]
+  [4;36;1mCategory Load (10.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering categories/index
+Completed in 470ms (View: 350, DB: 10) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2011-03-10 11:46:16) [GET]
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering categories/index
+Completed in 40ms (View: 20, DB: 0) | 200 OK [http://localhost/categories]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-10 11:46:16) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jobbslist%20scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2011-03-10 11:48:06) [GET]
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering categories/index
+Completed in 40ms (View: 30, DB: 0) | 200 OK [http://localhost/categories]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-10 11:48:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jobbslist%20scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2011-03-10 11:48:09) [GET]
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering categories/index
+Completed in 40ms (View: 30, DB: 0) | 200 OK [http://localhost/categories]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-10 11:48:09) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jobbslist%20scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2011-03-10 11:48:38) [GET]
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering categories/index
+Completed in 260ms (View: 190, DB: 0) | 200 OK [http://localhost/categories]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-10 11:48:38) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jobbslist%20scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2011-03-10 11:48:41) [GET]
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering categories/index
+Completed in 40ms (View: 20, DB: 0) | 200 OK [http://localhost/categories]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-10 11:48:41) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jobbslist%20scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2011-03-10 11:51:03) [GET]
+  [4;36;1mCategory Load (10.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering categories/index
+Completed in 221ms (View: 180, DB: 10) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2011-03-10 11:52:11) [GET]
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering categories/index
+Completed in 200ms (View: 180, DB: 0) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2011-03-10 11:52:20) [GET]
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering categories/index
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2011-03-10 11:52:31) [GET]
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering categories/index
+Completed in 40ms (View: 30, DB: 0) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2011-03-10 11:52:38) [GET]
+  [4;36;1mCategory Load (10.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering categories/index
+Completed in 40ms (View: 20, DB: 10) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2011-03-10 11:52:45) [GET]
+  [4;35;1mCategory Load (10.0ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering categories/index
+Completed in 40ms (View: 20, DB: 10) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2011-03-10 11:52:49) [GET]
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering categories/index
+Completed in 50ms (View: 30, DB: 0) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2011-03-10 11:52:56) [GET]
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering categories/index
+Completed in 110ms (View: 90, DB: 0) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2011-03-10 11:53:02) [GET]
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering categories/index
+Completed in 40ms (View: 20, DB: 0) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2011-03-10 11:54:18) [GET]
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering categories/index
+Completed in 40ms (View: 20, DB: 0) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2011-03-10 11:54:28) [GET]
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering categories/index
+Completed in 40ms (View: 30, DB: 0) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2011-03-10 11:54:45) [GET]
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering categories/index
+Completed in 40ms (View: 30, DB: 0) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2011-03-10 11:54:56) [GET]
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering categories/index
+Completed in 40ms (View: 20, DB: 0) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2011-03-10 11:55:53) [GET]
+Rendering template within layouts/application
+Rendering categories/new
+Completed in 160ms (View: 140, DB: 0) | 200 OK [http://localhost/categories/new]
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2011-03-10 23:00:21) [GET]
+Rendering template within layouts/application
+Rendering categories/new
+Completed in 70ms (View: 50, DB: 0) | 200 OK [http://localhost/categories/new]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-10 23:12:52) [GET]
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 110ms (View: 50, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-10 23:15:09) [GET]
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 20ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-10 23:15:20) [GET]
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-10 23:26:14) [GET]
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 50ms (View: 40, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-10 23:29:15) [GET]
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-10 23:30:42) [GET]
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 251ms (View: 220, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-10 23:31:45) [GET]
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-10 23:32:13) [GET]
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 20ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-10 23:33:19) [GET]
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-11 00:43:04) [GET]
+  [4;36;1mJob Load (20.0ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 91ms (View: 51, DB: 20) | 200 OK [http://localhost/]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-11 00:43:26) [GET]
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 90ms (View: 20, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-11 00:46:26) [GET]
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 70ms (View: 40, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-11 00:46:30) [GET]
+  [4;35;1mJob Load (10.0ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 70ms (View: 10, DB: 10) | 200 OK [http://localhost/]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-11 00:51:12) [GET]
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 50ms (View: 40, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-11 01:02:03) [GET]
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 40ms (View: 20, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing JobsController#create (for 127.0.0.1 at 2011-03-11 01:02:06) [POST]
+  Parameters: {"search"=>"", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;36;1mJob Create (70.0ms)[0m   [0;1mINSERT INTO "jobs" ("company", "city", "updated_at", "title", "website", "category_id", "description", "contact_info", "state", "created_at") VALUES(NULL, NULL, '2011-03-11 09:02:06', NULL, NULL, NULL, NULL, NULL, NULL, '2011-03-11 09:02:06')[0m
+Redirected to http://localhost:3000/jobs/2
+Completed in 230ms (DB: 70) | 302 Found [http://localhost/jobs]
+
+
+Processing JobsController#show (for 127.0.0.1 at 2011-03-11 01:02:06) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering jobs/show
+Completed in 60ms (View: 40, DB: 0) | 200 OK [http://localhost/jobs/2]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-11 01:02:25) [GET]
+  [4;36;1mJob Load (10.0ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 30ms (View: 20, DB: 10) | 200 OK [http://localhost/]
+
+
+Processing JobsController#create (for 127.0.0.1 at 2011-03-11 01:03:59) [POST]
+  Parameters: {"search"=>"", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;35;1mJob Create (0.0ms)[0m   [0mINSERT INTO "jobs" ("company", "city", "updated_at", "title", "website", "category_id", "description", "contact_info", "state", "created_at") VALUES(NULL, NULL, '2011-03-11 09:03:59', NULL, NULL, NULL, NULL, NULL, NULL, '2011-03-11 09:03:59')[0m
+Redirected to http://localhost:3000/jobs/3
+Completed in 110ms (DB: 0) | 302 Found [http://localhost/jobs]
+
+
+Processing JobsController#show (for 127.0.0.1 at 2011-03-11 01:03:59) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering jobs/show
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://localhost/jobs/3]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-11 01:04:07) [GET]
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 50ms (View: 40, DB: 0) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-11 10:24:37) [GET]
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 80ms (View: 60, DB: 0) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#destroy (for 127.0.0.1 at 2011-03-11 10:24:48) [DELETE]
+  Parameters: {"authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY=", "id"=>"2"}
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs"."id" = 2) [0m
+  [4;36;1mJob Destroy (0.0ms)[0m   [0;1mDELETE FROM "jobs" WHERE "id" = 2[0m
+Redirected to http://localhost:3000/jobs
+Completed in 501ms (DB: 0) | 302 Found [http://localhost/jobs/2]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-11 10:24:49) [GET]
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#destroy (for 127.0.0.1 at 2011-03-11 10:24:51) [DELETE]
+  Parameters: {"authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY=", "id"=>"3"}
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs"."id" = 3) [0m
+  [4;35;1mJob Destroy (0.0ms)[0m   [0mDELETE FROM "jobs" WHERE "id" = 3[0m
+Redirected to http://localhost:3000/jobs
+Completed in 140ms (DB: 0) | 302 Found [http://localhost/jobs/3]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-11 10:24:52) [GET]
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 40ms (View: 20, DB: 0) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#create (for 127.0.0.1 at 2011-03-11 10:24:59) [POST]
+  Parameters: {"search"=>"fds", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;35;1mJob Create (20.0ms)[0m   [0mINSERT INTO "jobs" ("company", "city", "updated_at", "title", "website", "category_id", "description", "contact_info", "state", "created_at") VALUES(NULL, NULL, '2011-03-11 18:24:59', NULL, NULL, NULL, NULL, NULL, NULL, '2011-03-11 18:24:59')[0m
+Redirected to http://localhost:3000/jobs/4
+Completed in 320ms (DB: 20) | 302 Found [http://localhost/jobs]
+
+
+Processing JobsController#show (for 127.0.0.1 at 2011-03-11 10:25:00) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs"."id" = 4) [0m
+Rendering template within layouts/application
+Rendering jobs/show
+Completed in 21ms (View: 11, DB: 0) | 200 OK [http://localhost/jobs/4]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-11 10:25:48) [GET]
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 240ms (View: 50, DB: 0) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#destroy (for 127.0.0.1 at 2011-03-11 10:25:51) [DELETE]
+  Parameters: {"authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY=", "id"=>"4"}
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs"."id" = 4) [0m
+  [4;35;1mJob Destroy (0.0ms)[0m   [0mDELETE FROM "jobs" WHERE "id" = 4[0m
+Redirected to http://localhost:3000/jobs
+Completed in 111ms (DB: 0) | 302 Found [http://localhost/jobs/4]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-11 10:25:51) [GET]
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#search (for 127.0.0.1 at 2011-03-11 10:25:57) [POST]
+  Parameters: {"search"=>"ds", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Job with ID=0):
+  app/controllers/jobs_controller.rb:86:in `search'
+
+Rendered rescues/_trace (191.0ms)
+Rendered rescues/_request_and_response (20.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-11 10:27:00) [GET]
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 300ms (View: 280, DB: 0) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-11 10:27:14) [GET]
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#search (for 127.0.0.1 at 2011-03-11 10:27:19) [POST]
+  Parameters: {"search"=>"sd", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs"."id" = 1) [0m
+Redirected to http://localhost:3000/jobs
+Completed in 20ms (DB: 0) | 302 Found [http://localhost/jobs/search]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-11 10:27:19) [GET]
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 51ms (View: 41, DB: 0) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#search (for 127.0.0.1 at 2011-03-11 10:27:21) [POST]
+  Parameters: {"search"=>"", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs"."id" = 1) [0m
+Redirected to http://localhost:3000/jobs
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/jobs/search]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-11 10:27:21) [GET]
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 30ms (View: 10, DB: 0) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#new (for 127.0.0.1 at 2011-03-11 10:27:25) [GET]
+Rendering template within layouts/application
+Rendering jobs/new
+Completed in 200ms (View: 190, DB: 0) | 200 OK [http://localhost/jobs/new]
+
+
+Processing JobsController#create (for 127.0.0.1 at 2011-03-11 10:28:18) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY=", "job"=>{"city"=>"new york", "company"=>"hackers org", "title"=>"rails hacker", "website"=>"hackers.com", "contact_info"=>"send resume to resume@hacker.com", "description"=>"need a hacker", "category_id"=>"4", "state"=>"new york"}}
+  [4;36;1mJob Create (0.0ms)[0m   [0;1mINSERT INTO "jobs" ("company", "city", "updated_at", "title", "website", "category_id", "description", "contact_info", "state", "created_at") VALUES('hackers org', 'new york', '2011-03-11 18:28:18', 'rails hacker', 'hackers.com', 4, 'need a hacker', 'send resume to resume@hacker.com', 'new york', '2011-03-11 18:28:18')[0m
+Redirected to http://localhost:3000/jobs/5
+Completed in 541ms (DB: 0) | 302 Found [http://localhost/jobs]
+
+
+Processing JobsController#show (for 127.0.0.1 at 2011-03-11 10:28:19) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs"."id" = 5) [0m
+Rendering template within layouts/application
+Rendering jobs/show
+Completed in 220ms (View: 200, DB: 0) | 200 OK [http://localhost/jobs/5]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-11 10:28:23) [GET]
+  [4;36;1mJob Load (10.0ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 30ms (View: 20, DB: 10) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#search (for 127.0.0.1 at 2011-03-11 10:28:29) [POST]
+  Parameters: {"search"=>"sadf", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs"."id" = 1) [0m
+Redirected to http://localhost:3000/jobs
+Completed in 20ms (DB: 0) | 302 Found [http://localhost/jobs/search]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-11 10:28:29) [GET]
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#search (for 127.0.0.1 at 2011-03-11 10:28:33) [POST]
+  Parameters: {"search"=>"sdaf", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs"."id" = 1) [0m
+Redirected to http://localhost:3000/jobs
+Completed in 20ms (DB: 0) | 302 Found [http://localhost/jobs/search]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-11 10:28:34) [GET]
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-11 10:30:33) [GET]
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#search (for 127.0.0.1 at 2011-03-11 10:30:37) [POST]
+  Parameters: {"search"=>"dsd", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering http://localhost:3000/jobs
+
+ActionView::MissingTemplate (Missing template http://localhost:3000/jobs.erb in view path app/views):
+  app/controllers/jobs_controller.rb:87:in `search'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing JobsController#search (for 127.0.0.1 at 2011-03-11 10:31:05) [POST]
+  Parameters: {"search"=>"dsd", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering jobs/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #22 of app/views/jobs/index.html.erb:
+19:     <th>Contact info</th>
+20:   </tr>
+21: 
+22: <% @jobs.each do |job| %>
+23:   <tr>
+24:     <td><%=h job.id %></td>
+25:     <td><%=h job.category_id %></td>
+
+    app/views/jobs/index.html.erb:22
+    app/controllers/jobs_controller.rb:87:in `search'
+
+Rendered rescues/_trace (90.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing JobsController#search (for 127.0.0.1 at 2011-03-11 10:31:29) [POST]
+  Parameters: {"search"=>"dsd", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering jobs/index
+
+ActionView::TemplateError (undefined method `each' for #<Job:0x4842804>) on line #22 of app/views/jobs/index.html.erb:
+19:     <th>Contact info</th>
+20:   </tr>
+21: 
+22: <% @jobs.each do |job| %>
+23:   <tr>
+24:     <td><%=h job.id %></td>
+25:     <td><%=h job.category_id %></td>
+
+    app/views/jobs/index.html.erb:22
+    app/controllers/jobs_controller.rb:87:in `search'
+
+Rendered rescues/_trace (371.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing JobsController#search (for 127.0.0.1 at 2011-03-11 10:31:34) [POST]
+  Parameters: {"search"=>"dsd", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering jobs/index
+
+ActionView::TemplateError (undefined method `each' for #<Job:0x48b23e8>) on line #22 of app/views/jobs/index.html.erb:
+19:     <th>Contact info</th>
+20:   </tr>
+21: 
+22: <% @jobs.each do |job| %>
+23:   <tr>
+24:     <td><%=h job.id %></td>
+25:     <td><%=h job.category_id %></td>
+
+    app/views/jobs/index.html.erb:22
+    app/controllers/jobs_controller.rb:87:in `search'
+
+Rendered rescues/_trace (300.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-11 10:32:17) [GET]
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 40ms (View: 20, DB: 0) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#search (for 127.0.0.1 at 2011-03-11 10:32:20) [POST]
+  Parameters: {"search"=>"asf", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering jobs/index
+
+ActionView::TemplateError (undefined method `each' for #<Job:0x48e0784>) on line #22 of app/views/jobs/index.html.erb:
+19:     <th>Contact info</th>
+20:   </tr>
+21: 
+22: <% @jobs.each do |job| %>
+23:   <tr>
+24:     <td><%=h job.id %></td>
+25:     <td><%=h job.category_id %></td>
+
+    app/views/jobs/index.html.erb:22
+    app/controllers/jobs_controller.rb:87:in `search'
+
+Rendered rescues/_trace (120.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-11 10:32:36) [GET]
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-11 10:34:36) [GET]
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#search (for 127.0.0.1 at 2011-03-11 10:34:39) [POST]
+  Parameters: {"search"=>"df", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+
+NameError (undefined local variable or method `all' for #<JobsController:0x49039a0>):
+  app/controllers/jobs_controller.rb:86:in `search'
+
+Rendered rescues/_trace (80.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#search (for 127.0.0.1 at 2011-03-11 10:35:08) [POST]
+  Parameters: {"search"=>"df", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+
+SyntaxError (C:/InstantRails/rails_apps/jobbslist/app/controllers/jobs_controller.rb:86: syntax error, unexpected '('
+    @jobs = Job.(1)
+                 ^):
+  
+
+Rendered rescues/_trace (70.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-11 10:35:23) [GET]
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#search (for 127.0.0.1 at 2011-03-11 10:35:26) [POST]
+  Parameters: {"search"=>"sdd", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 40ms (View: 30, DB: 0) | 200 OK [http://localhost/jobs/search]
+
+
+Processing JobsController#search (for 127.0.0.1 at 2011-03-11 10:35:27) [POST]
+  Parameters: {"search"=>"", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/jobs/search]
+
+
+Processing JobsController#search (for 127.0.0.1 at 2011-03-11 10:35:28) [POST]
+  Parameters: {"search"=>"", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 40ms (View: 30, DB: 0) | 200 OK [http://localhost/jobs/search]
+
+
+Processing JobsController#search (for 127.0.0.1 at 2011-03-11 10:35:36) [POST]
+  Parameters: {"search"=>"", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/jobs/search]
+
+
+Processing JobsController#search (for 127.0.0.1 at 2011-03-11 10:54:21) [POST]
+  Parameters: {"search"=>"hacker", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;35;1mJob Load (0.0ms)[0m   [0mSQLite3::SQLException: near "hacker": syntax error: SELECT * FROM "jobs" WHERE (title like '%'hacker'%') [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: near "hacker": syntax error: SELECT * FROM "jobs" WHERE (title like '%'hacker'%') ):
+  app/controllers/jobs_controller.rb:86:in `search'
+
+Rendered rescues/_trace (300.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing JobsController#search (for 127.0.0.1 at 2011-03-11 10:57:10) [POST]
+  Parameters: {"search"=>"", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;36;1mJob Load (20.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE (title like '''%') [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 30ms (View: 0, DB: 20) | 200 OK [http://localhost/jobs/search]
+
+
+Processing JobsController#search (for 127.0.0.1 at 2011-03-11 10:57:24) [POST]
+  Parameters: {"search"=>"", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE (title like '''%') [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 20ms (View: 10, DB: 0) | 200 OK [http://localhost/jobs/search]
+
+
+Processing JobsController#search (for 127.0.0.1 at 2011-03-11 10:57:29) [POST]
+  Parameters: {"search"=>"hacker", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSQLite3::SQLException: near "hacker": syntax error: SELECT * FROM "jobs" WHERE (title like ''hacker'%') [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: near "hacker": syntax error: SELECT * FROM "jobs" WHERE (title like ''hacker'%') ):
+  app/controllers/jobs_controller.rb:86:in `search'
+
+Rendered rescues/_trace (100.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing JobsController#search (for 127.0.0.1 at 2011-03-11 10:59:16) [POST]
+  Parameters: {"search"=>"hacker", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+
+ArgumentError (malformed format string - %h):
+  app/controllers/jobs_controller.rb:87:in `search'
+
+Rendered rescues/_trace (271.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing JobsController#search (for 127.0.0.1 at 2011-03-11 11:01:14) [POST]
+  Parameters: {"search"=>"hacker", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;35;1mJob Load (10.0ms)[0m   [0mSELECT * FROM "jobs" WHERE (title like 'hacker%') [0m
+Rendering template within layouts/application
+Rendering jobs/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #22 of app/views/jobs/index.html.erb:
+19:     <th>Contact info</th>
+20:   </tr>
+21: 
+22: <% @jobs.each do |job| %>
+23:   <tr>
+24:     <td><%=h job.id %></td>
+25:     <td><%=h job.category_id %></td>
+
+    app/views/jobs/index.html.erb:22
+    app/controllers/jobs_controller.rb:87:in `search'
+
+Rendered rescues/_trace (220.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing JobsController#search (for 127.0.0.1 at 2011-03-11 11:01:54) [POST]
+  Parameters: {"search"=>"hacker", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE (title like 'hacker%') [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 20ms (View: 10, DB: 0) | 200 OK [http://localhost/jobs/search]
+
+
+Processing JobsController#search (for 127.0.0.1 at 2011-03-11 11:02:00) [POST]
+  Parameters: {"search"=>"hacker", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE (title like 'hacker%') [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 20ms (View: 10, DB: 0) | 200 OK [http://localhost/jobs/search]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-11 11:02:06) [GET]
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-11 11:02:42) [GET]
+  [4;35;1mJob Load (10.0ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 30ms (View: 20, DB: 10) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-11 11:02:45) [GET]
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 40ms (View: 20, DB: 0) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#search (for 127.0.0.1 at 2011-03-11 11:02:49) [POST]
+  Parameters: {"search"=>"hacker", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE (title like '%hacker%') [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/jobs/search]
+
+
+Processing JobsController#search (for 127.0.0.1 at 2011-03-11 11:05:44) [POST]
+  Parameters: {"search"=>"", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE (title like '%%') [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 40ms (View: 20, DB: 0) | 200 OK [http://localhost/jobs/search]
+
+
+Processing JobsController#search (for 127.0.0.1 at 2011-03-11 11:05:47) [POST]
+  Parameters: {"search"=>"", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;35;1mJob Load (10.0ms)[0m   [0mSELECT * FROM "jobs" WHERE (title like '%%') [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 40ms (View: 20, DB: 10) | 200 OK [http://localhost/jobs/search]
+
+
+Processing JobsController#search (for 127.0.0.1 at 2011-03-11 11:12:59) [POST]
+  Parameters: {"search"=>"", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE (title like '%%' or company like '%%') [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/jobs/search]
+
+
+Processing JobsController#search (for 127.0.0.1 at 2011-03-11 11:13:08) [POST]
+  Parameters: {"search"=>"org", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE (title like '%org%' or company like '%org%') [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/jobs/search]
+
+
+Processing JobsController#search (for 127.0.0.1 at 2011-03-11 11:13:12) [POST]
+  Parameters: {"search"=>"testing", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE (title like '%testing%' or company like '%testing%') [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 31ms (View: 20, DB: 0) | 200 OK [http://localhost/jobs/search]
+
+
+Processing JobsController#search (for 127.0.0.1 at 2011-03-15 14:52:46) [POST]
+  Parameters: {"search"=>"", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;35;1mJob Load (651.0ms)[0m   [0mSELECT * FROM "jobs" WHERE (title like '%%' or company like '%%') [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 9313ms (View: 6019, DB: 651) | 200 OK [http://localhost/jobs/search]
+
+
+Processing JobsController#search (for 127.0.0.1 at 2011-03-15 14:53:07) [POST]
+  Parameters: {"search"=>"org", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE (title like '%org%' or company like '%org%') [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 480ms (View: 340, DB: 0) | 200 OK [http://localhost/jobs/search]
+
+
+Processing JobsController#search (for 127.0.0.1 at 2011-03-15 14:57:21) [POST]
+  Parameters: {"search"=>"", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;35;1mJob Load (10.0ms)[0m   [0mSELECT * FROM "jobs" WHERE (title like '%%' or company like '%%' or city like '%%' or state like '%%' or website like '%%' or description like '%%' or contact_info like '%%') [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 560ms (View: 390, DB: 10) | 200 OK [http://localhost/jobs/search]
+
+
+Processing JobsController#search (for 127.0.0.1 at 2011-03-15 14:57:29) [POST]
+  Parameters: {"search"=>"new", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;36;1mJob Load (130.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE (title like '%new%' or company like '%new%' or city like '%new%' or state like '%new%' or website like '%new%' or description like '%new%' or contact_info like '%new%') [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 1012ms (View: 511, DB: 130) | 200 OK [http://localhost/jobs/search]
+
+
+Processing JobsController#search (for 127.0.0.1 at 2011-03-15 14:57:38) [POST]
+  Parameters: {"search"=>"", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE (title like '%%' or company like '%%' or city like '%%' or state like '%%' or website like '%%' or description like '%%' or contact_info like '%%') [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/jobs/search]
+
+
+Processing JobsController#search (for 127.0.0.1 at 2011-03-15 14:57:52) [POST]
+  Parameters: {"search"=>"yahoo", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE (title like '%yahoo%' or company like '%yahoo%' or city like '%yahoo%' or state like '%yahoo%' or website like '%yahoo%' or description like '%yahoo%' or contact_info like '%yahoo%') [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/jobs/search]
+
+
+Processing JobsController#search (for 127.0.0.1 at 2011-03-15 14:57:55) [POST]
+  Parameters: {"search"=>"", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE (title like '%%' or company like '%%' or city like '%%' or state like '%%' or website like '%%' or description like '%%' or contact_info like '%%') [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 40ms (View: 20, DB: 0) | 200 OK [http://localhost/jobs/search]
+
+
+Processing JobsController#search (for 127.0.0.1 at 2011-03-15 14:58:00) [POST]
+  Parameters: {"search"=>"rspec", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE (title like '%rspec%' or company like '%rspec%' or city like '%rspec%' or state like '%rspec%' or website like '%rspec%' or description like '%rspec%' or contact_info like '%rspec%') [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/jobs/search]
+
+
+Processing JobsController#search (for 127.0.0.1 at 2011-03-15 14:58:02) [POST]
+  Parameters: {"search"=>"", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE (title like '%%' or company like '%%' or city like '%%' or state like '%%' or website like '%%' or description like '%%' or contact_info like '%%') [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/jobs/search]
+
+
+Processing JobsController#search (for 127.0.0.1 at 2011-03-15 14:58:08) [POST]
+  Parameters: {"search"=>"resume", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE (title like '%resume%' or company like '%resume%' or city like '%resume%' or state like '%resume%' or website like '%resume%' or description like '%resume%' or contact_info like '%resume%') [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 40ms (View: 20, DB: 0) | 200 OK [http://localhost/jobs/search]
+
+
+Processing JobsController#search (for 127.0.0.1 at 2011-03-15 14:58:18) [POST]
+  Parameters: {"search"=>"hacker", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE (title like '%hacker%' or company like '%hacker%' or city like '%hacker%' or state like '%hacker%' or website like '%hacker%' or description like '%hacker%' or contact_info like '%hacker%') [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/jobs/search]
+
+
+Processing JobsController#search (for 127.0.0.1 at 2011-03-15 14:58:20) [POST]
+  Parameters: {"search"=>"", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE (title like '%%' or company like '%%' or city like '%%' or state like '%%' or website like '%%' or description like '%%' or contact_info like '%%') [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/jobs/search]
+
+
+Processing JobsController#search (for 127.0.0.1 at 2011-03-15 15:14:31) [POST]
+  Parameters: {"search"=>"", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE (title like '%%' or company like '%%' or city like '%%' or state like '%%' or website like '%%' or description like '%%' or contact_info like '%%') [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 561ms (View: 551, DB: 0) | 200 OK [http://localhost/jobs/search]
+
+
+Processing JobsController#create (for 127.0.0.1 at 2011-03-15 15:14:39) [POST]
+  Parameters: {"search"=>"", "category"=>"", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;36;1mJob Create (20.0ms)[0m   [0;1mINSERT INTO "jobs" ("company", "city", "updated_at", "title", "website", "category_id", "description", "contact_info", "state", "created_at") VALUES(NULL, NULL, '2011-03-15 22:14:39', NULL, NULL, NULL, NULL, NULL, NULL, '2011-03-15 22:14:39')[0m
+Redirected to http://localhost:3000/jobs/6
+Completed in 211ms (DB: 20) | 302 Found [http://localhost/jobs]
+
+
+Processing JobsController#show (for 127.0.0.1 at 2011-03-15 15:14:39) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs"."id" = 6) [0m
+Rendering template within layouts/application
+Rendering jobs/show
+Completed in 40ms (View: 30, DB: 0) | 200 OK [http://localhost/jobs/6]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-15 15:14:55) [GET]
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 120ms (View: 100, DB: 0) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#destroy (for 127.0.0.1 at 2011-03-15 15:14:59) [DELETE]
+  Parameters: {"authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY=", "id"=>"6"}
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs"."id" = 6) [0m
+  [4;36;1mJob Destroy (0.0ms)[0m   [0;1mDELETE FROM "jobs" WHERE "id" = 6[0m
+Redirected to http://localhost:3000/jobs
+Completed in 140ms (DB: 0) | 302 Found [http://localhost/jobs/6]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-15 15:14:59) [GET]
+  [4;35;1mJob Load (10.0ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 40ms (View: 20, DB: 10) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#create (for 127.0.0.1 at 2011-03-15 15:24:49) [POST]
+  Parameters: {"search"=>"", "category"=>"", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;36;1mJob Create (0.0ms)[0m   [0;1mINSERT INTO "jobs" ("company", "city", "updated_at", "title", "website", "category_id", "description", "contact_info", "state", "created_at") VALUES(NULL, NULL, '2011-03-15 22:24:49', NULL, NULL, NULL, NULL, NULL, NULL, '2011-03-15 22:24:49')[0m
+Redirected to http://localhost:3000/jobs/7
+Completed in 150ms (DB: 0) | 302 Found [http://localhost/jobs]
+
+
+Processing JobsController#show (for 127.0.0.1 at 2011-03-15 15:24:49) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs"."id" = 7) [0m
+Rendering template within layouts/application
+Rendering jobs/show
+Completed in 30ms (View: 10, DB: 0) | 200 OK [http://localhost/jobs/7]
+
+
+Processing JobsController#show (for 127.0.0.1 at 2011-03-15 15:24:52) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs"."id" = 7) [0m
+Rendering template within layouts/application
+Rendering jobs/show
+Completed in 20ms (View: 10, DB: 0) | 200 OK [http://localhost/jobs/7]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-15 15:24:55) [GET]
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 50ms (View: 40, DB: 0) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#destroy (for 127.0.0.1 at 2011-03-15 15:24:58) [DELETE]
+  Parameters: {"authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY=", "id"=>"7"}
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs"."id" = 7) [0m
+  [4;35;1mJob Destroy (0.0ms)[0m   [0mDELETE FROM "jobs" WHERE "id" = 7[0m
+Redirected to http://localhost:3000/jobs
+Completed in 110ms (DB: 0) | 302 Found [http://localhost/jobs/7]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-15 15:24:59) [GET]
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-15 15:25:02) [GET]
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 40ms (View: 20, DB: 0) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#create (for 127.0.0.1 at 2011-03-15 15:25:04) [POST]
+  Parameters: {"search"=>"", "category"=>"", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY=", "method"=>"get"}
+  [4;36;1mJob Create (0.0ms)[0m   [0;1mINSERT INTO "jobs" ("company", "city", "updated_at", "title", "website", "category_id", "description", "contact_info", "state", "created_at") VALUES(NULL, NULL, '2011-03-15 22:25:04', NULL, NULL, NULL, NULL, NULL, NULL, '2011-03-15 22:25:04')[0m
+Redirected to http://localhost:3000/jobs/8
+Completed in 130ms (DB: 0) | 302 Found [http://localhost/jobs?method=get]
+
+
+Processing JobsController#show (for 127.0.0.1 at 2011-03-15 15:25:04) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs"."id" = 8) [0m
+Rendering template within layouts/application
+Rendering jobs/show
+Completed in 30ms (View: 10, DB: 0) | 200 OK [http://localhost/jobs/8]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-15 15:25:06) [GET]
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 41ms (View: 20, DB: 0) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#destroy (for 127.0.0.1 at 2011-03-15 15:25:10) [DELETE]
+  Parameters: {"authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY=", "id"=>"8"}
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs"."id" = 8) [0m
+  [4;36;1mJob Destroy (0.0ms)[0m   [0;1mDELETE FROM "jobs" WHERE "id" = 8[0m
+Redirected to http://localhost:3000/jobs
+Completed in 130ms (DB: 0) | 302 Found [http://localhost/jobs/8]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-15 15:25:10) [GET]
+  [4;35;1mJob Load (0.0ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 40ms (View: 30, DB: 0) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2011-03-15 15:42:45) [GET]
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 50ms (View: 40, DB: 0) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#search (for 127.0.0.1 at 2011-03-15 15:42:48) [POST]
+  Parameters: {"search"=>"", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;35;1mJob Load (10.0ms)[0m   [0mSELECT * FROM "jobs" WHERE (title like '%%' or company like '%%' or city like '%%' or state like '%%' or website like '%%' or description like '%%' or contact_info like '%%') [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 40ms (View: 20, DB: 10) | 200 OK [http://localhost/jobs/search]
+
+
+Processing JobsController#search (for 127.0.0.1 at 2011-03-15 15:42:53) [POST]
+  Parameters: {"search"=>"ajax", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;36;1mJob Load (0.0ms)[0m   [0;1mSELECT * FROM "jobs" WHERE (title like '%ajax%' or company like '%ajax%' or city like '%ajax%' or state like '%ajax%' or website like '%ajax%' or description like '%ajax%' or contact_info like '%ajax%') [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/jobs/search]
+
+
+Processing JobsController#search (for 127.0.0.1 at 2011-03-15 15:42:54) [POST]
+  Parameters: {"search"=>"", "commit"=>"Search", "authenticity_token"=>"8kekYSQFJHLEwSuDJvJIqwsnRLfQY0BkSczUdpFJlCY="}
+  [4;35;1mJob Load (10.0ms)[0m   [0mSELECT * FROM "jobs" WHERE (title like '%%' or company like '%%' or city like '%%' or state like '%%' or website like '%%' or description like '%%' or contact_info like '%%') [0m
+Rendering template within layouts/application
+Rendering jobs/index
+Completed in 30ms (View: 20, DB: 10) | 200 OK [http://localhost/jobs/search]

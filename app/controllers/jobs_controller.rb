@@ -80,4 +80,10 @@ class JobsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  # SEARCH /jobs/search
+  def search
+    @jobs = Job.find(:all, :conditions => ["title like ? or company like ? or city like ? or state like ? or website like ? or description like ? or contact_info like ?" , "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%" ] )
+    render :action => "index"
+  end
 end

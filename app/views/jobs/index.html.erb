@@ -1,7 +1,14 @@
+<% form_tag(:action => :search) do %>
+  <%= text_field_tag(:search, @search, :size => 40) %>
+  <%= submit_tag("Search") %>
+<% end %>
+<br />
+
 <h1>Listing jobs</h1>
 
 <table>
   <tr>
+    <th>ID</th>
     <th>Category ID</th>
     <th>Title</th>
     <th>Company</th>
@@ -14,6 +21,7 @@
 
 <% @jobs.each do |job| %>
   <tr>
+    <td><%=h job.id %></td>
     <td><%=h job.category_id %></td>
     <td><%=h job.title %></td>
     <td><%=h job.company %></td>

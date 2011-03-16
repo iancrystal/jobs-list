@@ -10,6 +10,7 @@ class JobsController < ApplicationController
       category_array << categ.name
       @category_list << category_array.join(":")
     end
+    @category_list.sort!
 
     # mysql (development) like is case insensitive, postgresql (production/heroku) uses ilike which is not supported
     # in mysql. this is set in config/environments/development.rb, production.rb and test.rb

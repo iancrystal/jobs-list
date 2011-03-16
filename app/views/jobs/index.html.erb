@@ -1,5 +1,6 @@
 <% form_tag('', :action => :search, :method => 'GET') do %>
   <%= text_field_tag(:search, @search, :size => 40) %>
+  <%= select_tag(:category, options_for_select(@category_list, params[:category])) %>
   <%= submit_tag("Search") %>
 <% end %>
 <br />

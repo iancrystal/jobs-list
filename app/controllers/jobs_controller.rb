@@ -2,13 +2,29 @@ class JobsController < ApplicationController
   # GET /jobs
   # GET /jobs.xml
   def index
+
+    categories = Category.all
+    @category_list = []
+    categories.each do |categ|
+      category_array = categ.ancestors.map {|a| a.name }.reverse
+      category_array << categ.name
+      @category_list << category_array.join(":")
+    end
+
     # mysql (development) like is case insensitive, postgresql (production/heroku) uses ilike which is not supported
     # in mysql. this is set in config/environments/development.rb, production.rb and test.rb
     like = LIKE
-    if (params[:search].blank?)
+    if (params[:search].blank? && params[:category].blank?)
       @jobs = Job.all
     else
-      @jobs = Job.find(:all, :conditions => ["title #{like} ? or company #{like} ? or city #{like} ? or state #{like} ? or website #{like} ? or description #{like} ? or contact_info #{like} ?" , "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%" ] )
+      chosen_category = params[:category].split(/:/).last
+      puts "chosen_category = #{chosen_category}"
+      category = Category.find_by_name(chosen_category)
+      category_array = category.descendants.map {|child| "category_id = #{child.id}" }
+      category_array << "category_id = #{category.id}"
+      category_clause = category_array.join(" or " )
+      #puts category_clause
+      @jobs = Job.find(:all, :conditions => [ "(#{category_clause}) and (title #{like} ? or company #{like} ? or city #{like} ? or state #{like} ? or website #{like} ? or description #{like} ? or contact_info #{like} ?)" , "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%" ] )
     end
 
     respond_to do |format|
@@ -88,3 +104,8 @@ class JobsController < ApplicationController
     end
   end
 end
+
+def display_children(parent)
+  puts parent.children(true).map {|child| child.name }.join(", " )
+end
+

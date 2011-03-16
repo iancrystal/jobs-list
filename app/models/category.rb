@@ -3,6 +3,6 @@ class Category < ActiveRecord::Base
   belongs_to :job
 
   def descendants
-    children.map { |f| !f.children.empty? ? f.children + [f]: f }.flatten
+    children.map { |f| !f.children.empty? ? f.descendants + [f]: f }.flatten
   end
 end

@@ -2,7 +2,14 @@ class JobsController < ApplicationController
   # GET /jobs
   # GET /jobs.xml
   def index
-    @jobs = Job.all
+    # mysql (development) like is case insensitive, postgresql (production/heroku) uses ilike which is not supported
+    # in mysql. this is set in config/environments/development.rb, production.rb and test.rb
+    like = LIKE
+    if (params[:search].blank?)
+      @jobs = Job.all
+    else
+      @jobs = Job.find(:all, :conditions => ["title #{like} ? or company #{like} ? or city #{like} ? or state #{like} ? or website #{like} ? or description #{like} ? or contact_info #{like} ?" , "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%" ] )
+    end
 
     respond_to do |format|
       format.html # index.html.erb
@@ -79,11 +86,5 @@ class JobsController < ApplicationController
       format.html { redirect_to(jobs_url) }
       format.xml  { head :ok }
     end
-  end
-
-  # SEARCH /jobs/search
-  def search
-    @jobs = Job.find(:all, :conditions => ["title like ? or company like ? or city like ? or state like ? or website like ? or description like ? or contact_info like ?" , "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%" ] )
-    render :action => "index"
   end
 end

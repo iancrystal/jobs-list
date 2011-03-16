@@ -26,3 +26,6 @@ config.action_view.cache_template_loading            = true
 
 # Enable threaded mode
 # config.threadsafe!
+#
+# postgresql case insensitve like, does not work in mysql dev db
+LIKE = "ilike"

@@ -15,3 +15,7 @@ config.action_controller.perform_caching             = false
 
 # Don't care if the mailer can't send
 config.action_mailer.raise_delivery_errors = false
+
+# postgresql (production) need to use ilike for case insensitive find so we use an environment variable
+LIKE = "like"
+

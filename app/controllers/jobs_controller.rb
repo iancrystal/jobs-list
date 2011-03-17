@@ -9,7 +9,8 @@ class JobsController < ApplicationController
     categories.each do |categ|
       category_array = categ.ancestors.map {|a| a.name }.reverse
       category_array << categ.name
-      @category_list << category_array.join(":")
+      # in case a blank is used instead of "all", remove the leading : 
+      @category_list << category_array.join(":").sub(/^:/,"")
     end
     @category_list.sort!
 

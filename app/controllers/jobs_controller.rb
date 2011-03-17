@@ -3,6 +3,7 @@ class JobsController < ApplicationController
   # GET /jobs.xml
   def index
 
+    session[:admin_id] = false
     categories = Category.all
     @category_list = []
     categories.each do |categ|
@@ -27,6 +28,8 @@ class JobsController < ApplicationController
       #puts category_clause
       @jobs = Job.find(:all, :conditions => [ "(#{category_clause}) and (title #{like} ? or company #{like} ? or city #{like} ? or state #{like} ? or website #{like} ? or description #{like} ? or contact_info #{like} ?)" , "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%" ] )
     end
+
+    @jobs.sort! {|a,b| b.created_at <=> a.created_at}
 
     respond_to do |format|
       format.html # index.html.erb

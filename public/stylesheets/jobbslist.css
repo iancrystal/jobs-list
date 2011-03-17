@@ -17,3 +17,37 @@
   background-color: #FFFFFF; 
 }
 
+tr { 
+  display: block; 
+  float: none; 
+  margin: 0px; 
+  background: url( '/images/tab_drop_bg.gif' ) 0px 0px;
+  height: 3em;
+}
+
+#date {
+  color: blue;
+  font-weight: bold;
+}
+
+#title {
+  width: 250px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+#company {
+  width: 250px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+#city {
+  width: 200px;
+  font-weight: bold;
+}
+
+.small {
+  font-size: .9em;
+  color: #848484;
+}

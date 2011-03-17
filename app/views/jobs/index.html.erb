@@ -5,39 +5,25 @@
 <% end %>
 <br />
 
-<h1>Listing jobs</h1>
-
 <table>
-  <tr>
-    <th>ID</th>
-    <th>Category ID</th>
-    <th>Title</th>
-    <th>Company</th>
-    <th>City</th>
-    <th>State</th>
-    <th>Website</th>
-    <th>Description</th>
-    <th>Contact info</th>
-  </tr>
-
 <% @jobs.each do |job| %>
   <tr>
-    <td><%=h job.id %></td>
-    <td><%=h job.category_id %></td>
-    <td><%=h job.title %></td>
-    <td><%=h job.company %></td>
-    <td><%=h job.city %></td>
-    <td><%=h job.state %></td>
-    <td><%=h job.website %></td>
-    <td><%=h job.description %></td>
-    <td><%=h job.contact_info %></td>
-    <td><%= link_to 'Show', job %></td>
-    <td><%= link_to 'Edit', edit_job_path(job) %></td>
-    <td><%= link_to 'Destroy', job, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td id="date"><%=h job.created_at.strftime("%b %d") + " -"  %></td>
+    <td id="title"><%= link_to job.title, job %></td>
+    <td class="small"><%=h " from " %></td>
+    <td id="company"><%=h job.company %></td>
+    <td class="small" align="right"><%=h job.city + ", " + job.state %></td>
+    <% if session[:admin_id] %>
+      <td><%= link_to 'Show', job %></td>
+      <td><%= link_to 'Edit', edit_job_path(job) %></td>
+      <td><%= link_to 'Destroy', job, :confirm => 'Are you sure?', :method => :delete %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New job', new_job_path %>
+<% if session[:admin_id] %>
+  <%= link_to 'New job', new_job_path %>
+<% end %>

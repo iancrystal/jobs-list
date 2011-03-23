@@ -1,18 +1,21 @@
-<% form_tag('', :action => :search, :method => 'GET') do %>
-  <%= text_field_tag(:search, @search, :size => 40) %>
-  <%= select_tag(:category, options_for_select(@category_list, params[:category])) %>
-  <%= submit_tag("Search") %>
-<% end %>
-<br />
-
+<div class="info">
+  <% form_tag('', :action => :search, :method => 'GET') do %>
+    <%= text_field_tag(:search, @search, :size => 40, :class => 'searchbox') %>
+    <%= select_tag(:category, options_for_select(@category_list, params[:category])) %>
+    <%= submit_tag("Search") %>
+  <% end %>
+  <br />
+  <div class="sort"><strong>Sort:</strong> Date | Job Type | Location</div> 
+</div>
+<br/>
 <table>
 <% @jobs.each do |job| %>
-  <tr>
-    <td id="date"><%=h job.created_at.strftime("%b %d") + " -"  %></td>
-    <td id="title"><%= link_to job.title, job %></td>
-    <td class="small"><%=h " from " %></td>
-    <td id="company"><%=h job.company %></td>
-    <td class="small" align="right"><%=h job.city + ", " + job.state %></td>
+  <tr class="">
+    <td class="date"><%=h job.created_at.strftime("%b %d") + " -"  %></td>
+    <td class="jobtitle"><%= link_to job.title, job %></td>
+    <td class="company"><%=h "(" + job.company  + ")" %></td>
+    <td class="space"></td>
+    <td class="city"><%=h job.city + ", " + job.state %></td>
     <% if session[:admin_id] %>
       <td><%= link_to 'Show', job %></td>
       <td><%= link_to 'Edit', edit_job_path(job) %></td>

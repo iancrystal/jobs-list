@@ -1,0 +1,108 @@
+body {
+font-family: "Lucida Sans", "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica;
+background: url(/images/headerbg.png) repeat-x #f0efef;
+font-size: small;
+color:#333;
+margin:0;
+padding:0;
+}
+
+#header_wrap {
+	width: 100%;
+	height: 120px;
+	margin:0px auto;
+	padding:0px;
+}
+
+.headerleft{
+	float:left;
+	width: 550px;
+	
+	}
+	
+.headerright{
+	float:right;
+	width: 400px;
+	}
+.headerbutton {
+	position: absolute;
+	margin: 40px -100px;
+	width: 225px;
+	height: 57px;
+}
+
+.info{
+	display:inline-block; 
+	clear:both;
+	margin:0 0 5px 0;
+	padding:0 1% 1.1em 1%;
+	border-bottom:1px dotted #ccc;
+}
+
+.sort{
+	font-size: .9em;
+	}
+ 
+.searchbox {
+border:1px; 
+background-color:#fff; 
+border: 2px solid #339900;
+background: #fff;
+color: #55555;
+font-size: 1.1em;
+}
+ 
+#body_wrap {
+       background: #FFFFFF;
+       border-top: 1px solid #cccccc;
+       border-bottom: 1px solid #cccccc;
+       border-left: 1px solid #cccccc;
+       border-right: 1px solid #cccccc;
+       width: 950px; 
+       height: auto;
+       margin: 50px auto;
+       padding-top: 20px;
+       padding-bottom: 20px;
+       padding-left: 20px;
+       padding-right: 20px;
+}
+
+table{ border-collapse: collapse; width: 100%; height: 50%; }
+td {border-bottom: 1px solid #ccc; padding: 10px;}
+.hover {background-color:#eee;}
+
+.date {
+  font-weight: bold;
+  width: 80px;
+}
+
+.jobtitle {
+  width: 190px;
+  font-weight: bold;
+ 
+}
+
+.company {
+  width: auto;
+  font-size: .9em;
+  color: #999;
+}
+
+.space {
+  width: 300px;
+}
+
+.city {
+  width: auto;
+  color: #999;
+}
+
+#footer {
+ clear: both;
+ position: relative;
+ z-index: 10;
+ height: 3em;
+ margin-top: -3em;
+ margin-left: 50em;
+ font-size: 10px;
+}

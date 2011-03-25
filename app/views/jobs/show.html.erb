@@ -1,43 +1,22 @@
-<p>
-  <b>Category:</b>
-  <%=h @job.category_id %>
-</p>
+<div class="info">
 
-<p>
-  <b>Title:</b>
-  <%=h @job.title %>
-</p>
+  <div class="display_jobtitle">
+    <h1> <%=h @job.title %> (<%=h @job.city %>, <%=h @job.state %>)</h1> 
+  </div>
+  <strong>Date Posted:</strong> <%=h @job.created_at.strftime("%b %d, %Y") %> 
+  <br />
+  <strong>Send Resumes to:</strong>
+  <br />
+  <%= link_to(@job.website, @job.full_website_url) %>
+</div>
 
-<p>
-  <b>Company:</b>
-  <%=h @job.company %>
-</p>
+<div id="job_description">
+  <%= @job.description %>
+  <br /><br />
+  <div class="job_id">Job ID: <%=h @job.id %></div>
+</div>
 
-<p>
-  <b>City:</b>
-  <%=h @job.city %>
-</p>
-
-<p>
-  <b>State:</b>
-  <%=h @job.state %>
-</p>
-
-<p>
-  <b>Website:</b>
-  <%=h @job.website %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%=h @job.description %>
-</p>
-
-<p>
-  <b>Contact info:</b>
-  <%=h @job.contact_info %>
-</p>
-
-
-<%= link_to 'Edit', edit_job_path(@job) %> |
-<%= link_to 'Back', jobs_path %>
+<% if session[:admin_id] %>
+  <%= link_to 'Edit', edit_job_path(@job) %> |
+  <%= link_to 'Back', jobs_path %>
+<% end %>

@@ -4,15 +4,7 @@ class JobsController < ApplicationController
   def index
 
     session[:admin_id] = false
-    categories = Category.all
-    @category_list = []
-    categories.each do |categ|
-      category_array = categ.ancestors.map {|a| a.name }.reverse
-      category_array << categ.name
-      # in case a blank is used instead of "all", remove the leading : 
-      @category_list << category_array.join(":").sub(/^:/,"")
-    end
-    @category_list.sort!
+    @category_array = Category.category_array
 
     # mysql (development) like is case insensitive, postgresql (production/heroku) uses ilike which is not supported
     # in mysql. this is set in config/environments/development.rb, production.rb and test.rb
@@ -20,13 +12,11 @@ class JobsController < ApplicationController
     if (params[:search].blank? && params[:category].blank?)
       @jobs = Job.all
     else
-      chosen_category = params[:category].split(/:/).last
-      puts "chosen_category = #{chosen_category}"
-      category = Category.find_by_name(chosen_category)
+      chosen_category = params[:category]
+      category = Category.find(chosen_category)
       category_array = category.descendants.map {|child| "category_id = #{child.id}" }
       category_array << "category_id = #{category.id}"
       category_clause = category_array.join(" or " )
-      #puts category_clause
       @jobs = Job.find(:all, :conditions => [ "(#{category_clause}) and (title #{like} ? or company #{like} ? or city #{like} ? or state #{like} ? or website #{like} ? or description #{like} ? or contact_info #{like} ?)" , "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%" ] )
     end
 
@@ -52,6 +42,7 @@ class JobsController < ApplicationController
   # GET /jobs/new
   # GET /jobs/new.xml
   def new
+    @category_array = Category.category_array
     @job = Job.new
 
     respond_to do |format|

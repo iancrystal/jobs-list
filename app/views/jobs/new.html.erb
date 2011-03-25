@@ -1,43 +1,288 @@
-<h1>New job</h1>
+<form id="form2" name="form2" class="wufoo topLabel page" autocomplete="off" enctype="multipart/form-data" method="post" action="create">
+  <div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value=<%= form_authenticity_token %> /></div>
+  <div id="header" class="info">
+    <h2>Create your Job AD</h2>
+    <div><a href="http://www.google.com">FAQ?</a></div>
+  </div>
 
-<% form_for(@job) do |f| %>
-  <%= f.error_messages %>
+  <ul>
 
-  <p>
-    Category ID<br />
-    <%= f.text_field :category_id %>
-  </p>
-  <p>
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :company %><br />
-    <%= f.text_field :company %>
-  </p>
-  <p>
-    <%= f.label :city %><br />
-    <%= f.text_field :city %>
-  </p>
-  <p>
-    <%= f.label :state %><br />
-    <%= f.text_field :state %>
-  </p>
-  <p>
-    <%= f.label :website %><br />
-    <%= f.text_field :website %>
-  </p>
-  <p>
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </p>
-  <p>
-    <%= f.label :contact_info %><br />
-    <%= f.text_area :contact_info %>
-  </p>
-  <p>
-    <%= f.submit 'Create' %>
-  </p>
-<% end %>
 
-<%= link_to 'Back', jobs_path %>
+    <li id="foli1" 		class="      ">
+    <label class="desc" id="title1" for="Field1">
+      Select Job Category:
+    </label>
+    <div>
+      <%= select_tag(:category_id, options_for_select(@category_array, params[:category_id]), :class => 'field select medium', :id => 'Field1', :tabindex => '1', :name => 'job[category_id]') %>
+    </div>
+    <p class="instruct" id="instruct1"><small>Select the correct job category</small></p>
+    </li>
+
+    <li id="foli3" 		class="     ">
+    <label class="desc" id="title3" for="Field3">
+      Company Name:
+    </label>
+    <div>
+      <input id="Field3" 			name="job[company]" 			type="text" 			class="field text medium" 			value="" 			maxlength="255" 			tabindex="2" 			onkeyup="" 						/>
+    </div>
+    </li>
+
+
+    <li id="foli24" 		class="      ">
+    <label class="desc" id="title24" for="Field24">
+      Company Url:
+    </label>
+    <div>
+      <input id="Field24" 			name="job[website]" 			type="text" 			class="field text medium" 			value="http://" 			maxlength="255" 			tabindex="3" 						/> 
+    </div>
+    </li>
+
+
+    <li id="foli12" 		class="     ">
+    <label class="desc" id="title12" for="Field12">
+      City:
+    </label>
+    <div>
+      <input id="Field12" 			name="job[city]" 			type="text" 			class="field text medium" 			value="" 			maxlength="255" 			tabindex="4" 			onkeyup="" 						/>
+    </div>
+    </li>
+
+
+    <li id="foli14" 		class="      ">
+    <label class="desc" id="title14" for="Field14">
+      State:
+    </label>
+    <div>
+      <select id="Field14" 			name="job[state]" 			class="field select small" 						tabindex="5" > 
+        <option value="AK" 				>
+        AK
+        </option>
+        <option value="AL" 				>
+        AL
+        </option>
+        <option value="AR" 				>
+        AR
+        </option>
+        <option value="AK" 				>
+        AK
+        </option>
+        <option value="CA" 								selected="selected">
+        CA
+        </option>
+        <option value="CO" 				>
+        CO
+        </option>
+        <option value="CT" 				>
+        CT
+        </option>
+        <option value="DE" 				>
+        DE
+        </option>
+        <option value="FL" 				>
+        FL
+        </option>
+        <option value="GA" 				>
+        GA
+        </option>
+        <option value="HI" 				>
+        HI
+        </option>
+        <option value="ID" 				>
+        ID
+        </option>
+        <option value="IL" 				>
+        IL
+        </option>
+        <option value="IN" 				>
+        IN
+        </option>
+        <option value="IA" 				>
+        IA
+        </option>
+        <option value="KS" 				>
+        KS
+        </option>
+        <option value="KN" 				>
+        KN
+        </option>
+        <option value="LA" 				>
+        LA
+        </option>
+        <option value="MA" 				>
+        MA
+        </option>
+        <option value="MD" 				>
+        MD
+        </option>
+        <option value="ME" 				>
+        ME
+        </option>
+        <option value="MI" 				>
+        MI
+        </option>
+        <option value="MN" 				>
+        MN
+        </option>
+        <option value="MO" 				>
+        MO
+        </option>
+        <option value="MS" 				>
+        MS
+        </option>
+        <option value="MT" 				>
+        MT
+        </option>
+        <option value="NC" 				>
+        NC
+        </option>
+        <option value="ND" 				>
+        ND
+        </option>
+        <option value="NE" 				>
+        NE
+        </option>
+        <option value="NH" 				>
+        NH
+        </option>
+        <option value="NJ" 				>
+        NJ
+        </option>
+        <option value="NM" 				>
+        NM
+        </option>
+        <option value="NV" 				>
+        NV
+        </option>
+        <option value="NY" 				>
+        NY
+        </option>
+        <option value="OH" 				>
+        OH
+        </option>
+        <option value="OK" 				>
+        OK
+        </option>
+        <option value="OR" 				>
+        OR
+        </option>
+        <option value="PA" 				>
+        PA
+        </option>
+        <option value="RI" 				>
+        RI
+        </option>
+        <option value="SC" 				>
+        SC
+        </option>
+        <option value="SD" 				>
+        SD
+        </option>
+        <option value="TN" 				>
+        TN
+        </option>
+        <option value="TX" 				>
+        TX
+        </option>
+        <option value="UT" 				>
+        UT
+        </option>
+        <option value="VT" 				>
+        VT
+        </option>
+        <option value="VA" 				>
+        VA
+        </option>
+        <option value="WA" 				>
+        WA
+        </option>
+        <option value="WI" 				>
+        WI
+        </option>
+        <option value="WV" 				>
+        WV
+        </option>
+        <option value="WY" 				>
+        WY
+        </option>
+        <option value="Other" 				>
+        Other
+        </option>
+      </select>
+    </div>
+    </li>
+
+
+    <li id="foli5" 		class="section      ">
+    <h3 id="title5">Tell Us About this Exciting Position</h3>
+    </li>
+
+
+    <li id="foli9" 		class="     ">
+    <label class="desc" id="title9" for="Field9">
+      Job Title:
+    </label>
+    <div>
+      <input id="Field9" 			name="job[title]" 			type="text" 			class="field text large" 			value="" 			maxlength="255" 			tabindex="6" 			onkeyup="" 						/>
+    </div>
+    </li>
+
+
+    <li id="foli8" 
+    class="     ">
+
+
+    <label class="desc" id="title8" for="Field8">
+      Job Description:
+    </label>
+
+    <div>
+      <textarea id="Field8" 
+        name="job[description]" 
+        class="field textarea medium" 
+        rows="10" cols="50"
+        tabindex="7"
+        onkeyup=""
+        ></textarea>
+
+    </div>
+
+    <p class="instruct" id="instruct8"><small>hhjkhkjhkj</small></p>
+
+
+    </li>
+
+
+
+    <li id="foli16" 		class="     ">
+    <label class="desc" id="title16" for="Field16">
+      Apply to Email:
+    </label>
+    <div>
+      <input id="Field16" 			name="job[contact_info]" 			type="text" 			class="field text medium" 			value="name@yourcomany.com" 			maxlength="255" 			tabindex="8" 						/> 
+    </div>
+    <p class="instruct" id="instruct16"><small>kl;sdkl;sdkfls;dksad;lfk'sd;'mdfmsdmf<br />
+      lkjskldfksdl;ksdl;kdsl;fklas;d'</small></p>
+    </li>
+
+
+
+
+    <li class="buttons ">
+    <div>
+      <input type="hidden" name="currentPage" id="currentPage" value="dB5YAYUJLThQ1vViLqkRtO8PC6nWmLuPsz2BRQNT4gw=" />
+      <input id="saveForm" name="saveForm" class="btTxt submit" type="submit" value="Submit" 
+      onmousedown="doSubmitEvents();" />
+
+
+    </div>
+    </li>
+
+    <li style="display:none">
+    <label for="comment">Do Not Fill This Out</label>
+    <textarea name="comment" id="comment" rows="1" cols="1"></textarea>
+    <input type="hidden" id="idstamp" name="idstamp" value="" />
+    <input type="hidden" id="stats" name="stats" value="" />
+    <input type="hidden" id="clickOrEnter" name="clickOrEnter" value="" />
+    </li>
+  </ul>
+</form>

@@ -20,11 +20,13 @@
   <script type="text/javascript" src="/javascripts/jblist.js"></script>
   <script type="text/javascript" src="/javascripts/wufoo.js"></script>
 
+  <%= javascript_include_tag 'prototype.js' %>
+
 </head>
 <body>
 
   <div id="header_wrap">
-      <div class="headerleft"><img src="/images/logo.gif" alt="Job Listing"></a></div>
+    <div class="headerleft" onclick="location.href='jobs';" style="cursor.pointer,"><img src="/images/logo.gif" alt="Job Listing"></a></div>
     <div class="headerright">
       <div class="headerbutton">
         <%= link_to(image_tag("/images/postbutton.gif"),

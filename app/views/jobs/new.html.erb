@@ -236,14 +236,7 @@
     </label>
 
     <div>
-      <textarea id="Field8" 
-        name="job[description]" 
-        class="field textarea medium" 
-        rows="10" cols="50"
-        tabindex="7"
-        onkeyup=""
-        ></textarea>
-
+      <%= textile_editor 'job', 'description', :cols => 50, :rows => 10, :id => 'Field8', :class => "field textarea medium", :tabindex => "7", :onkeyup => "" -%>
     </div>
 
     <p class="instruct" id="instruct8"><small>hhjkhkjhkj</small></p>
@@ -285,4 +278,6 @@
     <input type="hidden" id="clickOrEnter" name="clickOrEnter" value="" />
     </li>
   </ul>
+
+  <%= textile_editor_initialize -%>
 </form>

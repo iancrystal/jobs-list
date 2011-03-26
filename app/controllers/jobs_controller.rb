@@ -20,6 +20,8 @@ class JobsController < ApplicationController
       @jobs = Job.find(:all, :conditions => [ "(#{category_clause}) and (title #{like} ? or company #{like} ? or city #{like} ? or state #{like} ? or website #{like} ? or description #{like} ? or contact_info #{like} ?)" , "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%" ] )
     end
 
+    @jobs_sorted_by_location = @jobs.sort {|a,b| "#{a.state} #{a.city}".downcase <=> "#{b.state} #{b.city}".downcase }
+
     @jobs.sort! {|a,b| b.created_at <=> a.created_at}
 
     respond_to do |format|
@@ -99,9 +101,10 @@ class JobsController < ApplicationController
       format.xml  { head :ok }
     end
   end
-end
 
-def display_children(parent)
+  def display_children(parent)
   puts parent.children(true).map {|child| child.name }.join(", " )
+  end
+
 end
 

@@ -4,10 +4,15 @@
     <h1> <%=h @job.title %> (<%=h @job.city %>, <%=h @job.state %>)</h1> 
   </div>
   <strong>Date Posted:</strong> <%=h @job.created_at.strftime("%b %d, %Y") %> 
-  <br />
-  <strong>Send Resumes to:</strong>
-  <br />
+  <br /><br/>
+  <strong>Company:</strong>
+  <%=h @job.company %> 
+  <br /><br/>
+  <strong>How to apply:</strong>
+  <%=h @job.contact_info %> 
+  <br /><br/>
   <%= link_to(@job.website, @job.full_website_url) %>
+  <br/><br/>
 </div>
 
 <div id="job_description">

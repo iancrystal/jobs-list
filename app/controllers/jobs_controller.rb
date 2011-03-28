@@ -9,6 +9,8 @@ class JobsController < ApplicationController
     # mysql (development) like is case insensitive, postgresql (production/heroku) uses ilike which is not supported
     # in mysql. this is set in config/environments/development.rb, production.rb and test.rb
     like = LIKE
+    session[:category_id] = params[:category].to_i
+    puts session[:category]
     if (params[:search].blank? && params[:category].blank?)
       @jobs = Job.all
     else
@@ -103,8 +105,7 @@ class JobsController < ApplicationController
   end
 
   def display_children(parent)
-  puts parent.children(true).map {|child| child.name }.join(", " )
+    puts parent.children(true).map {|child| child.name }.join(", " )
   end
-
 end
 

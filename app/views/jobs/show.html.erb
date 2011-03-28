@@ -7,12 +7,12 @@
   <br /><br/>
   <strong>Company:</strong>
   <%=h @job.company %> 
+  <br/>
+  <%= link_to(@job.website, @job.full_website_url) %>
   <br /><br/>
   <strong>How to apply:</strong>
   <%=h @job.contact_info %> 
   <br /><br/>
-  <%= link_to(@job.website, @job.full_website_url) %>
-  <br/><br/>
 </div>
 
 <div id="job_description">

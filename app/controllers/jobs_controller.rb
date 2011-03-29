@@ -10,7 +10,6 @@ class JobsController < ApplicationController
     # in mysql. this is set in config/environments/development.rb, production.rb and test.rb
     like = LIKE
     session[:category_id] = params[:category].to_i
-    puts session[:category]
     if (params[:search].blank? && params[:category].blank?)
       @jobs = Job.all
     else

@@ -119,3 +119,6 @@ td {border-top: 1px solid #ccc; padding: 10px;}
   font-size: 10px;
 }
 
+#Field1, #Field3, #Field24, #Field12 {
+  width: 200px;
+}

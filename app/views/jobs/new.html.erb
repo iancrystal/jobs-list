@@ -1,8 +1,8 @@
 <form id="form2" name="form2" class="wufoo topLabel page" autocomplete="off" enctype="multipart/form-data" method="post" action="create">
   <div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value=<%= form_authenticity_token %> /></div>
   <div id="header" class="info">
-    <h2>Create your Job AD</h2>
-    <div><a href="http://www.google.com">FAQ?</a></div>
+    <h2>Create your Job AD ($49 for 30 days)</h2>
+    <div>Have questions, please visit our <%= link_to "FAQ [?]" , :controller => "about", :action => "faq" %></div>
   </div>
 
   <ul>
@@ -10,7 +10,7 @@
 
     <li id="foli1" 		class="      ">
     <label class="desc" id="title1" for="Field1">
-      Select Job Category:
+      Select Job Category: <span id="req_1" class="req">*</span>
     </label>
     <div>
       <%= select_tag(:category_id, options_for_select(@category_array, params[:category_id]), :class => 'field select medium', :id => 'Field1', :tabindex => '1', :name => 'job[category_id]') %>
@@ -20,7 +20,7 @@
 
     <li id="foli3" 		class="     ">
     <label class="desc" id="title3" for="Field3">
-      Company Name:
+      Company Name: <span id="req_1" class="req">*</span>
     </label>
     <div>
       <input id="Field3" 			name="job[company]" 			type="text" 			class="field text medium" 			value="" 			maxlength="255" 			tabindex="2" 			onkeyup="" 						/>
@@ -40,7 +40,7 @@
 
     <li id="foli12" 		class="     ">
     <label class="desc" id="title12" for="Field12">
-      City:
+      City: <span id="req_1" class="req">*</span>
     </label>
     <div>
       <input id="Field12" 			name="job[city]" 			type="text" 			class="field text medium" 			value="" 			maxlength="255" 			tabindex="4" 			onkeyup="" 						/>
@@ -50,7 +50,7 @@
 
     <li id="foli14" 		class="      ">
     <label class="desc" id="title14" for="Field14">
-      State:
+      State: <span id="req_1" class="req">*</span>
     </label>
     <div>
       <select id="Field14" 			name="job[state]" 			class="field select small" 						tabindex="5" > 
@@ -219,7 +219,7 @@
 
     <li id="foli9" 		class="     ">
     <label class="desc" id="title9" for="Field9">
-      Job Title:
+      Job Title: <span id="req_1" class="req">*</span>
     </label>
     <div>
       <input id="Field9" 			name="job[title]" 			type="text" 			class="field text large" 			value="" 			maxlength="255" 			tabindex="6" 			onkeyup="" 						/>
@@ -248,7 +248,7 @@
 
     <li id="foli16" 		class="     ">
     <label class="desc" id="title16" for="Field16">
-      Apply to Email:
+      How to apply: <span id="req_1" class="req">*</span>
     </label>
     <div>
       <input id="Field16" 			name="job[contact_info]" 			type="text" 			class="field text medium" 			value="name@yourcomany.com" 			maxlength="255" 			tabindex="8" 						/> 

@@ -45,7 +45,12 @@
   </div>
 
   <div id="footer">
-    <p><a href="home">Home</a> | <a href="About">About</a> | <a href="Contact">Contact</a> | <a href="Privacy">Privacy Policy</a> | <a href="faq">FAQ</a> &nbsp; Jobbslist Copyright &copy 2011</p>
+    <p><%= link_to "Home" , :controller => "jobs" %> |
+    <%= link_to "About" , :controller => "jobs" %> | 
+    <%= link_to "Contact" , :controller => "about", :action => "contact" %> | 
+    <%= link_to "Privacy Policy" , :controller => "about", :action => "privacy" %> | 
+    <%= link_to "FAQ" , :controller => "about", :action => "faq" %>
+    &nbsp; Jobbslist Copyright &copy 2011</p>
   </div>
 
 </body>

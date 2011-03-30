@@ -11,29 +11,31 @@ class ApplicationController < ActionController::Base
   def test_payment
 
     # Use the TrustCommerce test servers
-    ActiveMerchant::Billing::Base.mode = :test
+    #ActiveMerchant::Billing::Base.mode = :test
 
     # ActiveMerchant accepts all amounts as Integer values in cents
-    # $10.00
-    amount = 1000
+    # $2.00
+    amount = 200
 
     # The card verification value is also known as CVV2, CVC2, or CID
     credit_card = ActiveMerchant::Billing::CreditCard.new(
-      :first_name         => 'Bob',
-      :last_name          => 'Bobsen',
-      :number             => '4242424242424242',
+      :first_name         => 'Ian',
+      :last_name          => 'Crystal',
+      :number             => '4845941646385613',
       :month              => '8',
-      :year               => '2012',
-      :verification_value => '123'
+      :year               => '2014',
+      :verification_value => '086'
     )
 
     # Validating the card automatically detects the card type
     if credit_card.valid?
 
       # Create a gateway object for the TrustCommerce service
-      gateway = ActiveMerchant::Billing::TrustCommerceGateway.new(
-        :login => 'TestMerchant',
-        :password => 'password'
+      gateway = ActiveMerchant::Billing::PaypalGateway.new(
+        :login => 'support_api1.jobbslist.com',
+        :password => 'EK7FRUMUA4LQQLFS',
+        :signature => 'EK7FRUMUA4LQQLFS',
+        :ip => '137.57.101.5'
       )
 
       # Authorize for the amount

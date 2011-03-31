@@ -6,6 +6,10 @@
 <head>
 
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <meta name="description" content="Are you seraching for a job? Jobbslist is an easy to use job board with range of technlogy jobs such as Programming Jobs, Mobile Development Jobs, Web Design Jobs, Web Development Jobs and much much more!" />
+  <meta name="keywords" content="Job Search, Job Opportunities, Job list, Jobs list, Job Listings, Jobs Available, Available Jobs, Security Jobs,  Programming Jobs, Networking Jobs, job seekers, jobs hiring, entry level jobs ,find a job, work from home jobs, job searches, available jobs, security jobs, hiring jobs, computer jobs, job search, hiring, search of job, job vacancies, jobs online, online jobs, job opportunities, job seekers, find job, new job, hot jobs, office jobs, job listings, jobs available, local jobs, snag a job" />
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  
 
   <title>Technology Jobs: Design Jobs, IT Jobs, Mobile Development Jobs, Programming Jobs, Web Development Jobs</title>
 
@@ -22,11 +26,26 @@
 
   <%= javascript_include_tag 'prototype.js' %>
 
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-22014335-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+
+   </script>
+  
+
 </head>
 <body>
 
   <div id="header_wrap">
-    <div class="headerleft" onclick="location.href='http://empty-summer-287.heroku.com';" style="cursor.pointer,"><img src="/images/logo.gif" alt="Job Listing"></a></div>
+    <div class="headerleft" onclick="location.href='<%= jobs_url %>';" style="cursor.pointer,"><img src="/images/logo.gif" alt="Job Listing"></a></div>
     <div class="headerright">
       <div class="headerbutton">
         <%= link_to(image_tag("/images/postbutton.gif"),
@@ -48,6 +67,7 @@
     <p><%= link_to "Home" , :controller => "jobs" %> |
     <%= link_to "About" , :controller => "about" %> | 
     <%= link_to "Contact" , :controller => "about", :action => "contact" %> | 
+    <%= link_to "Post A Job" , :controller => "jobs", :action => "new" %> | 
     <%= link_to "Privacy Policy" , :controller => "about", :action => "privacy" %> | 
     <%= link_to "FAQ" , :controller => "about", :action => "faq" %>
     &nbsp; Jobbslist Copyright &copy 2011</p>

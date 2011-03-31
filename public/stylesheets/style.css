@@ -7,6 +7,16 @@ body {
   padding:0;
 }
 
+#notice {
+  border: 2px solid red;
+  padding: 1em;
+  margin-bottom: 1em;
+  background-color: #f0f0f0 ;
+  font: bold smaller sans-serif;
+  font-size: small;
+}
+
+
 #header_wrap {
   width: 960x;
   height: 120px;
@@ -96,7 +106,7 @@ td {border-top: 1px solid #ccc; padding: 10px;}
 }
 
 .space {
-  width: 300px;
+  width: 275px;
 }
 
 .city {

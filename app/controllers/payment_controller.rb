@@ -53,12 +53,12 @@ class PaymentController < ApplicationController
           job.status = 1;
           redirect_to(jobs_url, :notice => 'Successfully charged $#{sprintf("%.2f", amount / 100)} to the credit card #{credit_card.display_number}. Job AD #{params[:job_id]} now activated.') 
         else
-          flash[:notice] = response.message
+          flash.now[:notice] = response.message
           render :action => "index"
         end
 
       else
-        flash[:notice] = "credit card is not valid"
+        flash.now[:notice] = "credit card is not valid"
 
       end
 

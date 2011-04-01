@@ -7,7 +7,7 @@ body {
   padding:0;
 }
 
-#notice {
+#error {
   border: 2px solid red;
   padding: 1em;
   margin-bottom: 1em;
@@ -15,7 +15,14 @@ body {
   font: bold smaller sans-serif;
   font-size: small;
 }
-
+#notice {
+  border: 2px solid green;
+  padding: 1em;
+  margin-bottom: 1em;
+  background-color: #f0f0f0 ;
+  font: bold smaller sans-serif;
+  font-size: small;
+}
 
 #header_wrap {
   width: 960x;
@@ -130,5 +137,5 @@ td {border-top: 1px solid #ccc; padding: 10px;}
 }
 
 #Field1, #Field3, #Field24, #Field12 {
-  width: 200px;
+  width: 250px;
 }

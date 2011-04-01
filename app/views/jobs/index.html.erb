@@ -20,9 +20,6 @@
         <td class="company"><%=h "(" + job.company  + ")" %></td>
         <td class="space"></td>
         <td class="city"><%=h job.city + ", " + job.state %></td>
-        <% if (job.status.blank? || job.status < 0) %>
-          <td><%= link_to "Pay Now", "/payment/index/#{job.id}" %></td>
-        <% end %>
         <% if session[:admin_id] %>
           <td><%= link_to 'Show', job %></td>
           <td><%= link_to 'Edit', edit_job_path(job) %></td>
@@ -42,9 +39,6 @@
         <td class="company"><%=h "(" + job.company  + ")" %></td>
         <td class="space"></td>
         <td class="city"><%=h job.city + ", " + job.state %></td>
-        <% if (job.status.blank? || job.status < 0) %>
-          <td><%= link_to "Pay Now", "/payment/index/#{job.id}" %></td>
-        <% end %>
         <% if session[:admin_id] %>
           <td><%= link_to 'Show', job %></td>
           <td><%= link_to 'Edit', edit_job_path(job) %></td>

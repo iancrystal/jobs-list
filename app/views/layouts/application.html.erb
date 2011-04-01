@@ -45,9 +45,13 @@
 <body>
 
   <div id="header_wrap">
-    <div class="headerleft" onclick="location.href='<%= jobs_url %>';" style="cursor.pointer,"><img src="/images/logo.gif" alt="Job Listing"></a></div>
+    <div class="headerleft" border="0">
+      <%= link_to(image_tag("/images/logo.gif"), 
+                    { :controller => "jobs", :action => "index"}) 
+      %>
+    </div>
     <div class="headerright">
-      <div class="headerbutton">
+      <div class="headerbutton" border="0">
         <%= link_to(image_tag("/images/postbutton.gif"),
                     { :controller => "jobs", :action => "new"})
         %>
@@ -59,6 +63,10 @@
     <% if flash[:notice] -%>
       <br/>
       <div id="notice"><%= flash[:notice] %></div>
+    <% end -%>
+    <% if flash[:error] -%>
+      <br/>
+      <div id="error"><%= flash[:error] %></div>
     <% end -%>
     <%= yield %>
   </div>

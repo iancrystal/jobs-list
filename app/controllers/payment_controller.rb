@@ -58,7 +58,7 @@ class PaymentController < ApplicationController
         end
 
       else
-        flash.now[:notice] = "credit card is not valid"
+        flash.now[:error] = "credit card is not valid"
 
       end
 

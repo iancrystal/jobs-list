@@ -12,8 +12,8 @@ class Category < ActiveRecord::Base
     categories.each do |categ|
       category_array = categ.ancestors.map {|a| a.name }.reverse
       category_array << categ.name
-      # in case a blank is used instead of "all", remove the leading : 
-      category_hash[category_array.join(":").sub(/^:/,"")] = categ.id
+      # remove the leading : or All Jobs:
+      category_hash[category_array.join(":").sub(/(All Jobs)?:/,"")] = categ.id
     end
     # sort converts the hash elements into 2d arrays and sorts the arrays
     category_hash.sort

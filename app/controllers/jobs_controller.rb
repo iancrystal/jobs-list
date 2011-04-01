@@ -10,15 +10,21 @@ class JobsController < ApplicationController
     # in mysql. this is set in config/environments/development.rb, production.rb and test.rb
     like = LIKE
     session[:category_id] = params[:category].to_i
+
+    # life span of AD
+    $DAYS = 30
+
+    days_ago = Time.now - ($DAYS * (24 * 60 * 60))
+
     if (params[:search].blank? && params[:category].blank?)
-      @jobs = Job.all
+      @jobs = Job.find(:all, :conditions => ["created_at > ?", days_ago ] )
     else
       chosen_category = params[:category]
       category = Category.find(chosen_category)
       category_array = category.descendants.map {|child| "category_id = #{child.id}" }
       category_array << "category_id = #{category.id}"
       category_clause = category_array.join(" or " )
-      @jobs = Job.find(:all, :conditions => [ "(#{category_clause}) and (title #{like} ? or company #{like} ? or city #{like} ? or state #{like} ? or website #{like} ? or description #{like} ? or contact_info #{like} ?)" , "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%" ] )
+      @jobs = Job.find(:all, :conditions => [ "(created_at > ?) and (#{category_clause}) and (title #{like} ? or company #{like} ? or city #{like} ? or state #{like} ? or website #{like} ? or description #{like} ? or contact_info #{like} ?)" , days_ago, "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%", "%"+params[:search]+"%" ] )
     end
 
     @jobs_sorted_by_location = @jobs.sort {|a,b| "#{a.state} #{a.city}".downcase <=> "#{b.state} #{b.city}".downcase }

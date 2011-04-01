@@ -11,6 +11,7 @@ class PaymentController < ApplicationController
       # ActiveMerchant accepts all amounts as Integer values in cents
       # $49.00
       amount = 4900
+      amount_str = sprintf("%.2f", amount / 100)
 
       # The card verification value is also known as CVV2, CVC2, or CID
       credit_card = ActiveMerchant::Billing::CreditCard.new(
@@ -34,6 +35,7 @@ class PaymentController < ApplicationController
       }
       }
 
+      job = Job.find(params[:job_id])
 
       # Validating the card automatically detects the card type
       if credit_card.valid?
@@ -51,14 +53,17 @@ class PaymentController < ApplicationController
         if response.success?
           job = Job.find(params[:job_id])
           job.status = 1;
-          redirect_to(jobs_url, :notice => 'Successfully charged $#{sprintf("%.2f", amount / 100)} to the credit card #{credit_card.display_number}. Job AD #{params[:job_id]} now activated.') 
+          job.save
+          JobPostMailer.deliver_confirm_payment(job, amount_str, credit_card.display_number, "#{params[:first_name]} #{params[:last_name]}")
+          redirect_to(jobs_url, :notice => 'Successfully charged $#{amount_str} to the credit card #{credit_card.display_number}. Job AD #{params[:job_id]} now activated.') 
         else
-          flash.now[:notice] = response.message
-          render :action => "index"
+          flash[:error] = response.message
+          redirect_to :controller => "payment", :action => "index", :id => params[:job_id]
         end
 
       else
-        flash.now[:error] = "credit card is not valid"
+        flash[:error] = "credit card is not valid"
+        redirect_to :controller => "payment", :action => "index", :id => params[:job_id]
 
       end
 

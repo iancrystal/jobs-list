@@ -7,9 +7,9 @@ class ApplicationController < ActionController::Base
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
-
-  def test_email
-    JobPostMailer.deliver_confirm_post
+def test_email
+    j = Job.find(22)
+    JobPostMailer.deliver_confirm_post(j, "#{request.protocol}#{request.host}:#{request.port}/payment/index/#{j.id}")
   end
-
+  
 end

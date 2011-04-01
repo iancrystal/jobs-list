@@ -1,22 +1,22 @@
 class JobPostMailer < ActionMailer::Base
   
 
-  def confirm_post(sent_at = Time.now)
-    subject    'JobPostMailer#confirm'
-    recipients 'ian_crystal@yahoo.com'
-    from       ''
-    sent_on    sent_at
+  def confirm_post(job = Job.find(22), url = 'http://jobbslist.com')
+    subject    'Job Posting Confirmation from jobbslist.com'
+    recipients job.customer_email
+    from       'support@jobbslist.com'
+    sent_on    Time.now
     
-    body       :greeting => 'Hi post,'
+    body       :job => job, :url => url
   end
 
-  def confirm_payment(sent_at = Time.now)
-    subject    'JobPostMailer#sent'
-    recipients ''
-    from       ''
-    sent_on    sent_at
+  def confirm_payment(job = Job.find(22), amount = "49.00", card_number = "xxxx-xxxx", full_name = "Joe Smith")
+    subject    'Payment Confirmation from jobbslist.com'
+    recipients job.customer_email
+    from       'support@jobbslist.com'
+    sent_on    Time.now
     
-    body       :greeting => 'Hi,'
+    body       :job => job, :amount => amount, :card_number => card_number, :full_name => full_name
   end
 
 end

@@ -1,3 +1,18 @@
-JobPostMailer#sent
+Dear <%= @full_name %>,
 
-Find me in app/views/job_post_mailer/sent.erb
+Thank you for your payment for your job posting on jobbslist.com.
+
+The amount $<%= @amount %> have been successfully charged to card number <%= @card_number %>.
+
+Job ID: <%= @job.id %>
+Title: <%= @job.title %>
+Description: <%= @job.description %>
+Contact Information: <%= @job.contact_info %>
+Company: <%= @job.company %>
+City: <%= @job.city %>
+State: <%= @job.state %>
+Website: <%= @job.website %>
+Posted on: <%= @job.created_at %>
+
+We wish you the best on your hiring,
+jobbslist.com support staff

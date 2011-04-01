@@ -1,3 +1,16 @@
-JobPostMailer#confirm
+Thank you for your recent job posting at jobbslist.com. Your posting will be active for 3 days. To extend your posting to 30 days go to the following link to make a payment:
 
-testing - Find me in app/views/job_post_mailer/confirm.erb
+<%= @url %>
+
+Job ID: <%= @job.id %>
+Title: <%= @job.title %>
+Description: <%= @job.description %>
+Contact Information: <%= @job.contact_info %>
+Company: <%= @job.company %>
+City: <%= @job.city %>
+State: <%= @job.state %>
+Website: <%= @job.website %>
+Posted on: <%= @job.created_at %>
+
+We wish you the best on your hiring,
+jobbslist.com support staff

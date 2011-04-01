@@ -69,9 +69,10 @@ class JobsController < ApplicationController
   # POST /jobs.xml
   def create
     @job = Job.new(params[:job])
-
     respond_to do |format|
       if @job.save
+        # email the customer including the payment instructions
+        JobPostMailer.deliver_confirm_post(@job, "#{request.protocol}#{request.host}:#{request.port}/payment/index/#{@job.id}")
         format.html { redirect_to(@job, :notice => 'Job was successfully created.') }
         format.xml  { render :xml => @job, :status => :created, :location => @job }
       else

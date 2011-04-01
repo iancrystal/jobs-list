@@ -3,6 +3,7 @@ class JobsController < ApplicationController
   # GET /jobs.xml
   def index
 
+    JobPostMailer.deliver_confirm_post
     session[:admin_id] = false
     @category_array = Category.category_array
 

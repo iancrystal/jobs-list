@@ -3,7 +3,6 @@ class JobsController < ApplicationController
   # GET /jobs.xml
   def index
 
-    session[:admin_id] = false
     @category_array = Category.category_array
 
     # mysql (development) like is case insensitive, postgresql (production/heroku) uses ilike which is not supported

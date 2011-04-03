@@ -9,17 +9,21 @@
   <%=h @job.company %> 
   <br/>
   <%= link_to(@job.website, @job.full_website_url) %>
-  <br /><br/>
-  <strong>How to apply:</strong>
-  <%=h @job.contact_info %> 
-  <br /><br/>
+  <br/>
 </div>
 
 <div id="job_description">
   <%= @job.description %>
   <br /><br />
-  <div class="job_id">Job ID: <%=h @job.id %></div>
 </div>
+
+<div id="apply_wrap">
+  <strong>How to apply:</strong>
+  <%=h @job.contact_info %> 
+</div>
+<br />
+
+<div class="job_id">Job ID: <%=h @job.id %></div>
 
 <% if session[:admin_id] %>
   <%= link_to 'Edit', edit_job_path(@job) %> |

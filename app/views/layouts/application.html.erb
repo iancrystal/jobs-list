@@ -8,7 +8,6 @@
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <meta name="description" content="Are you seraching for a job? Jobbslist is an easy to use job board with range of technlogy jobs such as Programming Jobs, Mobile Development Jobs, Web Design Jobs, Web Development Jobs and much much more!" />
   <meta name="keywords" content="Job Search, Job Opportunities, Job list, Jobs list, Job Listings, Jobs Available, Available Jobs, Security Jobs,  Programming Jobs, Networking Jobs, job seekers, jobs hiring, entry level jobs ,find a job, work from home jobs, job searches, available jobs, security jobs, hiring jobs, computer jobs, job search, hiring, search of job, job vacancies, jobs online, online jobs, job opportunities, job seekers, find job, new job, hot jobs, office jobs, job listings, jobs available, local jobs, snag a job" />
-  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   
 
   <title>Technology Jobs: Design Jobs, IT Jobs, Mobile Development Jobs, Programming Jobs, Web Development Jobs</title>
@@ -45,19 +44,16 @@
 <body>
 
   <div id="header_wrap">
-    <div class="headerleft" border="0">
-      <%= link_to(image_tag("/images/logo.gif"), 
-                    { :controller => "jobs", :action => "index"}) 
-      %>
+    <div class="headerleft">
+      <a href="/jobs"><img src="/images/logo.gif?1301723894" alt="Job List" width="512" height="120" border="0" /></a>
     </div>
     <div class="headerright">
-      <div class="headerbutton" border="0">
-        <%= link_to(image_tag("/images/postbutton.gif"),
-                    { :controller => "jobs", :action => "new"})
-        %>
+      <div class="headerbutton" >
+        <a href="/jobs/new"><img src="/images/postbutton.gif?1301723894" alt="Job Listings" width="225" height="56" border="0"/></a>
       </div>
     </div>
   </div>
+  
 
   <div id="body_wrap">
     <% if flash[:notice] -%>

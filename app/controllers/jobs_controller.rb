@@ -51,7 +51,14 @@ class JobsController < ApplicationController
   # GET /jobs/new.xml
   def new
     @category_array = Category.category_array
+    @category_array.delete_if {|x| x[0] == " All Jobs" }
+    @state_array = Job.state_array
+      
     @job = Job.new
+    @job.state = "CA"
+    @job.category_id = 5
+    @job.website = "http://"
+    @job.contact_info = "name@yourcompany.com"
 
     respond_to do |format|
       format.html # new.html.erb
@@ -75,6 +82,8 @@ class JobsController < ApplicationController
         format.html { redirect_to(@job, :notice => 'Job was successfully created.') }
         format.xml  { render :xml => @job, :status => :created, :location => @job }
       else
+        @category_array = Category.category_array
+        @state_array = Job.state_array
         format.html { render :action => "new" }
         format.xml  { render :xml => @job.errors, :status => :unprocessable_entity }
       end

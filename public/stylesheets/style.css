@@ -136,7 +136,7 @@ td {border-top: 1px solid #ccc; padding: 10px;}
   font-size: 10px;
 }
 
-#Field1, #Field3, #Field24, #Field12 {
+#Field1, #Field3, #Field24, #Field12, #Field43 {
   width: 250px;
 }
 
@@ -149,5 +149,15 @@ td {border-top: 1px solid #ccc; padding: 10px;}
   padding-bottom: 10px;
   padding-left: 10px;
   padding-right: 10px;
+}
+
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
 }
 

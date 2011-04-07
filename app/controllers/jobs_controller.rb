@@ -40,11 +40,19 @@ class JobsController < ApplicationController
   # GET /jobs/1.xml
   def show
     @job = Job.find(params[:id])
+    @created_at = @job.created_at.strftime("%b %d, %Y")
 
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @job }
     end
+  end
+
+  def preview
+    @job = Job.new(params[:job])
+    textile_object = RedCloth.new(@job.description)
+    @created_at = Time.now.strftime("%b %d, %Y")
+    render :action => "show", :layout => "false"
   end
 
   # GET /jobs/new
@@ -58,7 +66,6 @@ class JobsController < ApplicationController
     @job.state = "CA"
     @job.category_id = 5
     @job.website = "http://"
-    @job.contact_info = "name@yourcompany.com"
 
     respond_to do |format|
       format.html # new.html.erb

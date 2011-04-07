@@ -62,6 +62,10 @@ body {
   font-size: .9em;
 }
 
+#preview {
+  border: 1px solid gray;
+}
+
 .searchbox {
   border:1px; 
   background-color:#fff; 
@@ -92,7 +96,7 @@ h1{
 }
 
 table{ border-collapse: collapse; width: 100%; height: 50%; }
-td {border-top: 1px solid #ccc; padding: 10px;}
+td {border-bottom: 1px solid #ccc; padding: 10px;}
 .hover {background-color:#eee;}
 
 .date {

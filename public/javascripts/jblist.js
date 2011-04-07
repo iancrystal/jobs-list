@@ -1,16 +1,4 @@
 // JavaScript Document
-$(function() {
-	
-	$("td").hover(function() {
-		
-		$(this).parent().addClass("hover");
-		
-	}, function() {
-		
-		$(this).parent().removeClass("hover");
-		
-		});
-});
 
 function hidediv(id) {
   //safe function to hide an element with a specified id

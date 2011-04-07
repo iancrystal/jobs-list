@@ -3,7 +3,7 @@
   <div class="display_jobtitle">
     <h1> <%=h @job.title %> (<%=h @job.city %>, <%=h @job.state %>)</h1> 
   </div>
-  <strong>Date Posted:</strong> <%=h @job.created_at.strftime("%b %d, %Y") %> 
+  <strong>Date Posted:</strong> <%=h @created_at %> 
   <br/>
   <strong>Company:</strong>
   <%=h @job.company %> 

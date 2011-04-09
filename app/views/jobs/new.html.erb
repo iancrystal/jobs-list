@@ -103,9 +103,10 @@
     <li class="buttons ">
     <%= submit_to_remote 'preview_btn', 'Preview',
       :url => {:action => 'preview'},
-      :before => "Element.show('spinner')",
-      :complete => "Element.hide('spinner')",
-      :update => 'preview' %>
+      :update => 'preview',
+      :before => "$(spinner).style.display = ''",
+      :complete => "Element.hide('spinner')" 
+    %>
     </li>
 
     <div id="preview" style="display:block">

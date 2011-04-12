@@ -85,8 +85,8 @@ class JobsController < ApplicationController
     respond_to do |format|
       if @job.save
         # email the customer including the payment instructions
-        #JobPostMailer.deliver_confirm_post(@job, "#{request.protocol}#{request.host}:#{request.port}/payment/index/#{@job.id}")
-        flash[:notice] = "Your job posting titled \"#{@job.title}\" was successfully created. Please pay for the posting to be activated."
+        JobPostMailer.deliver_confirm_post(@job, "#{request.protocol}#{request.host}:#{request.port}/payment/index/#{@job.id}")
+        flash[:notice] = "Your job posting titled \"#{@job.title}\" was successfully created. Please pay for the posting to be activated. Payment instructions have been emailed to you in case you prefer to pay later."
         format.html { redirect_to(:controller => "payment", :action => "index", :id => @job.id) }
         format.xml  { render :xml => @job, :status => :created, :location => @job }
       else

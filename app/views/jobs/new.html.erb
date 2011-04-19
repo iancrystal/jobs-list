@@ -2,21 +2,16 @@
   :url => { :action => :create },
   :html => { :id => "form2", :class => "wufoo topLabel page", :autocomplete => "off", :enctype => "multipart/form-data" } do |form| %>
   <%= error_messages_for :job %>
-  <div id="header" class="info">
+  <div id="header" class="">
     <h2>Create your Job AD ($49 for 30 days)</h2>
     <div>Have questions, please visit our <%= link_to "FAQ [?]" , :controller => "about", :action => "faq" %></div>
   </div>
 
   <ul>
 
-    <li id="foli43" 		class="     ">
-    <label class="desc" id="title43" for="Field43">
-      Email: <span id="req_1" class="req">*</span>
-    </label>
-    <span>
-      <%= form.text_field :customer_email, :id => "Field43", :class => "field text fn", :tabindex => "1", :maxlength => "255" %>
-    </span>
-    <p class="instruct" id="instruct43"><small>Enter your email address where you want to get confirmation email and payment instructions.<br /></small></p>
+    <br/>
+    <li id="foli5" 		class="section">
+    <h3 id="title5">Tell Us About this Exciting Position</h3>
     </li>
 
     <li id="foli1" 		class="      ">
@@ -27,6 +22,40 @@
       <%= form.select(:category_id, options_for_select(@category_array, @job.category_id), :class => 'field select medium', :id => 'Field1', :tabindex => '1', :name => 'job[category_id]') %>
     </div>
     <p class="instruct" id="instruct1"><small>Select the correct job category</small></p>
+    </li>
+
+    <li id="foli9" 		class="     ">
+    <label class="desc" id="title9" for="Field9">
+      Job Title: <span id="req_1" class="req">*</span>
+    </label>
+    <div>
+      <%= form.text_field :title, :id => "Field9", :class => "field text large", :maxlength => "255", :tabindex => "6", :onkeyup => "" %>
+    </div>
+    </li>
+
+    <li id="foli8" 
+    class="     ">
+    <label class="desc" id="title8" for="Field8">
+      Job Description:
+    </label>
+    <div>
+      <%= textile_editor 'job', 'description', :cols => 50, :rows => 10, :id => 'Field8', :class => "field textarea medium", :tabindex => "7", :onkeyup => "" -%>
+    </div>
+    <p class="instruct" id="instruct8"><small>Enter your job description<br /><strong>Note:</strong> Please review your information before submitting </small></p>
+    </li>
+
+    <li id="foli16" 		class="     ">
+    <label class="desc" id="title16" for="Field16">
+      How to apply: <span id="req_1" class="req">*</span>
+    </label>
+    <div>
+      <%= form.text_field :contact_info, :id => "Field16", :class => "field text medium", :maxlength => "255", :tabindex => "8" %>
+    </div>
+    <p class="instruct" id="instruct16"><small><br />This is where candidates apply for the job position. Please enter an email address or web link.</small></p>
+    </li>
+
+    <li id="foli6" 		class="section      ">
+    <h3 id="title6">Tell Us About Your Company</h3>
     </li>
 
     <li id="foli3" 		class="     ">
@@ -65,38 +94,14 @@
     </div>
     </li>
 
-    <li id="foli5" 		class="section      ">
-    <h3 id="title5">Tell Us About this Exciting Position</h3>
-    </li>
-
-    <li id="foli9" 		class="     ">
-    <label class="desc" id="title9" for="Field9">
-      Job Title: <span id="req_1" class="req">*</span>
+    <li id="foli43" 		class="     ">
+    <label class="desc" id="title43" for="Field43">
+      Email: <span id="req_1" class="req">*</span>
     </label>
-    <div>
-      <%= form.text_field :title, :id => "Field9", :class => "field text large", :maxlength => "255", :tabindex => "6", :onkeyup => "" %>
-    </div>
-    </li>
-
-    <li id="foli8" 
-    class="     ">
-    <label class="desc" id="title8" for="Field8">
-      Job Description:
-    </label>
-    <div>
-      <%= textile_editor 'job', 'description', :cols => 50, :rows => 10, :id => 'Field8', :class => "field textarea medium", :tabindex => "7", :onkeyup => "" -%>
-    </div>
-    <p class="instruct" id="instruct8"><small>Enter your job description<br /><strong>Note:</strong> Please review your information before submitting </small></p>
-    </li>
-
-    <li id="foli16" 		class="     ">
-    <label class="desc" id="title16" for="Field16">
-      How to apply: <span id="req_1" class="req">*</span>
-    </label>
-    <div>
-      <%= form.text_field :contact_info, :id => "Field16", :class => "field text medium", :maxlength => "255", :tabindex => "8" %>
-    </div>
-    <p class="instruct" id="instruct16"><small><br />This is where candidates apply for the job position. Please enter an email address or web link.</small></p>
+    <span>
+      <%= form.text_field :customer_email, :id => "Field43", :class => "field text fn", :tabindex => "1", :maxlength => "255" %>
+    </span>
+    <p class="instruct" id="instruct43"><small>Enter your email address where you want to get confirmation email and payment instructions.<br /></small></p>
     </li>
 
     <br/>

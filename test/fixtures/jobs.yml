@@ -1,21 +1,25 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  category_id: 1
-  title: MyString
-  company: MyString
-  city: MyString
-  state: MyString
-  website: MyString
-  description: MyText
-  contact_info: MyText
+payroll_supervisor:
+  category_id: 5
+  title: Payroll Supervisor
+  company: CalPak
+  city: Hayward
+  state: CA
+  website: www.calpak.com
+  description: "*supervise* the payroll department"
+  contact_info: "email your resume to steve@calpak.com"
+  status: 1
+  customer_email: "steve@calpak.com"
 
-two:
-  category_id: 1
-  title: MyString
-  company: MyString
-  city: MyString
-  state: MyString
-  website: MyString
-  description: MyText
-  contact_info: MyText
+accountant:
+  category_id: 4
+  title: Accountant
+  company: Sega Corporation
+  city: San Mateo
+  state: CA
+  website: http://sega.com
+  description: perform accounting duties
+  contact_info: "email your resume to ian@sega.com"
+  status: 1
+  customer_email: "ian@sega.com"

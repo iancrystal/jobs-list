@@ -1,9 +1,27 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  name: MyString
+# normally we do not need :id but we need it here to test the tree functionality
+
+root:
+  id: 1
+  name: All Jobs
+
+finance:
+  id: 2
+  name: finance
   parent_id: 1
 
-two:
-  name: MyString
+technology:
+  id: 3
+  name: technology 
   parent_id: 1
+
+accounting:
+  id: 4
+  name: accounting
+  parent_id: 2
+
+payroll:
+  id: 5
+  name: payroll
+  parent_id: 4

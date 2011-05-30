@@ -1,2 +1,19 @@
-Use this README file to introduce your application and point to useful places in the API for learning more.
-Run "rake doc:app" to generate API documentation for your models, controllers, helpers, and libraries.
+=JOBBSLIST
+
+This is a simple job posting application created by Ian Crystal for a client from elance.com. 
+
+The source code of this application was documented using rdoc. Open doc/app/index.html for easy viewing of source code and documentation.
+
+Unit, functional and integration tests were written for this application (under the test directory). Run "rake test" to run all tests. 
+
+The application sends job posting and payment confirmation emails to the customer using the gmail_smtp plugin.
+
+The acts_as_tree plugin was used to support a tree structure for the categories. However the current site uses a flat category structure since the client preferred it.
+
+Textile's RedCloth was used for the job description editor.
+
+The Active Merchant/Paypal is used for the payment gateway. 
+
+The Wufoo form framework was used to create some of the forms.
+
+The client wanted to start with a simple low budget application and only make enhancements as the business grows. Therefore the implementation of some features such as the admin/logon and the job list sort mechanisms were oversimplified.

@@ -7,10 +7,10 @@ payroll_supervisor:
   city: Hayward
   state: CA
   website: www.calpak.com
-  description: "*supervise* the payroll department"
-  contact_info: "email your resume to steve@calpak.com"
+  description: "h1. Overview\n\nSupervise the *payroll* department\n\nh2. +detailed responsibilities+\n# printing paychecks\n# giving paychecks\n\nh2. benefits\n* good pay\n* dental\n* medical"
+  contact_info: email your resume to steve@calpak.com
   status: 1
-  customer_email: "steve@calpak.com"
+  customer_email: steve@calpak.com
 
 accountant:
   category_id: 4
@@ -20,6 +20,18 @@ accountant:
   state: CA
   website: http://sega.com
   description: perform accounting duties
-  contact_info: "email your resume to ian@sega.com"
+  contact_info: email your resume to ian@sega.com
   status: 1
-  customer_email: "ian@sega.com"
+  customer_email: ian@sega.com
+
+old:
+  category_id: 3
+  title: Cobol Programmer
+  company: Sega Corporation
+  city: San Mateo
+  state: CA
+  website: http://sega.com
+  description: program using cobol 
+  contact_info: email your resume to ian@sega.com
+  status: 1
+  customer_email: ian@sega.com

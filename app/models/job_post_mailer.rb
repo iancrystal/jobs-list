@@ -1,7 +1,7 @@
 class JobPostMailer < ActionMailer::Base
   
 
-  def confirm_post(job = Job.find(22), url = 'http://jobbslist.com')
+  def confirm_post(job = Job.find(1), url = 'http://jobbslist.com')
     subject    'Job Posting Confirmation from jobbslist.com'
     recipients job.customer_email
     from       'support@jobbslist.com'
@@ -10,7 +10,7 @@ class JobPostMailer < ActionMailer::Base
     body       :job => job, :url => url
   end
 
-  def confirm_payment(job = Job.find(22), amount = "49.00", card_number = "xxxx-xxxx", full_name = "Joe Smith")
+  def confirm_payment(job = Job.find(1), amount = "49.00", card_number = "xxxx-xxxx", full_name = "Joe Smith")
     subject    'Payment Confirmation from jobbslist.com'
     recipients job.customer_email
     from       'support@jobbslist.com'

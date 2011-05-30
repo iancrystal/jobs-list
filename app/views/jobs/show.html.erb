@@ -25,7 +25,7 @@
 
 <div class="job_id">Job ID: <%=h @job.id %></div>
 
-<% if session[:admin_id] %>
+<% if session[:admin_id] && ! @job.id.blank? %>
   <%= link_to 'Edit', edit_job_path(@job) %> |
   <%= link_to 'Back', jobs_path %>
 <% end %>

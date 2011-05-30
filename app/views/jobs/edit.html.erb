@@ -36,6 +36,14 @@
     <%= f.text_area :contact_info %>
   </p>
   <p>
+    <%= f.label :customer_email %><br />
+    <%= f.text_field :customer_email %>
+  </p>
+  <p>
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </p>
+  <p>
     <%= f.submit 'Update' %>
   </p>
 <% end %>

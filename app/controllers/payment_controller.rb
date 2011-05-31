@@ -8,8 +8,12 @@ class PaymentController < ApplicationController
       if params[:promo_code] && params[:promo_code].upcase == "FREE30"
           job = Job.find(params[:job_id])
           job.status = 1;
-          job.save
-          redirect_to(jobs_url, :notice => "Congratulations !!! The promo code was accepted. No amount was charged to your credit card. Job AD #{params[:job_id]} now activated.") 
+          if job.save
+            redirect_to(jobs_url, :notice => "Congratulations !!! The promo code was accepted. No amount was charged to your credit card. Job AD #{params[:job_id]} now activated.") 
+          else
+            flash[:error] = "Database error: Unable to activate job posting."
+            redirect_to :controller => "payment", :action => "index", :id => params[:job_id]
+          end
       else
 
         # Use the TrustCommerce test servers
@@ -60,9 +64,13 @@ class PaymentController < ApplicationController
           if response.success?
             job = Job.find(params[:job_id])
             job.status = 1;
-            job.save
-            JobPostMailer.deliver_confirm_payment(job, amount_str, credit_card.display_number, "#{params[:first_name]} #{params[:last_name]}")
-            redirect_to(jobs_url, :notice => "Successfully charged $#{amount_str} to the credit card #{credit_card.display_number}. Job AD #{params[:job_id]} now activated.") 
+            if job.save
+              JobPostMailer.deliver_confirm_payment(job, amount_str, credit_card.display_number, "#{params[:first_name]} #{params[:last_name]}")
+              redirect_to(jobs_url, :notice => "Successfully charged $#{amount_str} to the credit card #{credit_card.display_number}. Job AD #{params[:job_id]} now activated.") 
+            else
+              flash[:error] = "Database error: Unable to activate job posting."
+              redirect_to :controller => "payment", :action => "index", :id => params[:job_id]
+            end
           else
             flash[:error] = response.message
             redirect_to :controller => "payment", :action => "index", :id => params[:job_id]

@@ -68,13 +68,23 @@
   </div>
 
   <div id="footer">
-    <p><%= link_to "Home" , :controller => "jobs" %> |
+    <p>
+    <%= link_to "Home" , :controller => "jobs" %> |
     <%= link_to "About" , :controller => "about" %> | 
     <%= link_to "Contact" , :controller => "about", :action => "contact" %> | 
     <%= link_to "Post A Job" , :controller => "jobs", :action => "new" %> | 
     <%= link_to "Privacy Policy" , :controller => "about", :action => "privacy" %> | 
     <%= link_to "FAQ" , :controller => "about", :action => "faq" %>
-    &nbsp; Jobbslist Copyright &copy 2011</p>
+    &nbsp; Jobbslist Copyright &copy 2011
+    <br/>
+    <% if session[:user_id].blank? %>
+      <%= link_to "Login" , :controller => "admin", :action => "login" %> |
+    <% else %>
+      <%= link_to "Logout" , :controller => "admin", :action => "logout" %> |
+    <% end %>
+    <%= link_to "Categories" , :controller => "categories", :action => "index" %> |
+    <%= link_to "Users" , :controller => "users", :action => "index" %> |
+    </p>
   </div>
 
 </body>

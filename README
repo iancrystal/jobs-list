@@ -16,4 +16,4 @@ The Active Merchant/Paypal is used for the payment gateway.
 
 The Wufoo form framework was used to create some of the forms.
 
-The client wanted to start with a simple low budget application and only make enhancements as the business grows. Therefore the implementation of some features such as the admin/logon and the job list sort mechanisms were oversimplified.
+The business strategy of the site was simplicity therefore the user login and admin links are small and located at the footer. 

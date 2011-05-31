@@ -1,4 +1,7 @@
 class JobsController < ApplicationController
+
+  skip_before_filter :authorize, :except => [ :edit, :update, :destroy ]
+
   # GET /jobs
   # GET /jobs.xml
   def index
@@ -117,6 +120,7 @@ class JobsController < ApplicationController
   # DELETE /jobs/1
   # DELETE /jobs/1.xml
   def destroy
+
     @job = Job.find(params[:id])
     @job.destroy
 
@@ -129,5 +133,6 @@ class JobsController < ApplicationController
   def display_children(parent)
     puts parent.children(true).map {|child| child.name }.join(", " )
   end
+
 end
 

@@ -13,14 +13,14 @@
 <br/>
 <table id="sorted_by_date">
   <% @jobs.each do |job| %>
-    <% if ((! job.status.blank? && job.status > 0) || session[:admin_id] ) %>
+    <% if ((! job.status.blank? && job.status > 0) || session[:user_id] ) %>
       <tr class="">
         <td class="date"><%=h job.created_at.strftime("%b %d") + " -"  %></td>
         <td class="jobtitle"><%= link_to job.title, job %></td>
         <td class="company"><%=h "(" + job.company  + ")" %></td>
         <td class="space"></td>
         <td class="city"><%=h job.city + ", " + job.state %></td>
-        <% if session[:admin_id] %>
+        <% if session[:user_id] %>
           <td><%= link_to 'Show', job %></td>
           <td><%= link_to 'Edit', edit_job_path(job) %></td>
           <td><%= link_to 'Destroy', job, :confirm => 'Are you sure?', :method => :delete %></td>
@@ -32,14 +32,14 @@
 
 <table id="sorted_by_location" style="display:none;" >
   <% @jobs_sorted_by_location.each do |job| %>
-    <% if ((! job.status.blank? && job.status > 0) || session[:admin_id]) %>
+    <% if ((! job.status.blank? && job.status > 0) || session[:user_id]) %>
       <tr class="">
         <td class="date"><%=h job.created_at.strftime("%b %d") + " -"  %></td>
         <td class="jobtitle"><%= link_to job.title, job %></td>
         <td class="company"><%=h "(" + job.company  + ")" %></td>
         <td class="space"></td>
         <td class="city"><%=h job.city + ", " + job.state %></td>
-        <% if session[:admin_id] %>
+        <% if session[:user_id] %>
           <td><%= link_to 'Show', job %></td>
           <td><%= link_to 'Edit', edit_job_path(job) %></td>
           <td><%= link_to 'Destroy', job, :confirm => 'Are you sure?', :method => :delete %></td>
@@ -51,6 +51,6 @@
 
 <br />
 
-<% if session[:admin_id] %>
+<% if session[:user_id] %>
   <%= link_to 'New job', new_job_path %>
 <% end %>

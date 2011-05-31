@@ -106,11 +106,13 @@ class JobsControllerTest < ActionController::TestCase
   end
 
   test "should get edit" do
+    session[:user_id] = users(:ian).to_param
     get :edit, :id => jobs(:accountant).to_param
     assert_response :success
   end
 
   test "should update job" do
+    session[:user_id] = users(:ian).to_param
     @input_attributes = {
       :category_id => 4,
       :title => "Tax Accountant",
@@ -136,6 +138,7 @@ class JobsControllerTest < ActionController::TestCase
   end
 
   test "should destroy job" do
+    session[:user_id] = users(:ian).to_param
     assert_difference('Job.count', -1) do
       delete :destroy, :id => jobs(:accountant).to_param
     end

@@ -5,7 +5,7 @@ class PaymentController < ApplicationController
 
     if request.post?
 
-      if params[:promo_code].upcase == "FREE30"
+      if params[:promo_code] && params[:promo_code].upcase == "FREE30"
           job = Job.find(params[:job_id])
           job.status = 1;
           job.save
@@ -33,13 +33,13 @@ class PaymentController < ApplicationController
         purchase_options = {
           :ip => request.remote_ip,
           :billing_address => {
-          :name     => "#{params[:first_name]} #{params[:last_name]}",
-          :address1 => "params[:address1]",
-          :city     => "params[:city]",
-          :state    => "params[:state]",
-          :country  => "params[:country]",
-          :zip      => "params[:zip]"
-        }
+            :name     => "#{params[:first_name]} #{params[:last_name]}",
+            :address1 => "params[:address1]",
+            :city     => "params[:city]",
+            :state    => "params[:state]",
+            :country  => "params[:country]",
+            :zip      => "params[:zip]"
+          }
         }
 
         job = Job.find(params[:job_id])
@@ -79,4 +79,10 @@ class PaymentController < ApplicationController
     end
 
   end
+
+  protected
+
+  def authorize
+  end
+
 end

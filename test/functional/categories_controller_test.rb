@@ -1,6 +1,11 @@
 require 'test_helper'
 
 class CategoriesControllerTest < ActionController::TestCase
+
+  def setup
+     session[:user_id] = users(:ian).to_param
+  end
+
   test "should get index" do
     get :index
     assert_response :success
